@@ -1,0 +1,172 @@
+# ===========================================
+# .gitignore for mon47 Project
+# ===========================================
+
+# ============ 빌드 출력 디렉토리 ============
+**/Build/
+**/Output/
+**/Debug/
+**/Release/
+**/DebugMT/
+**/ReleaseMT/
+**/x64/
+**/x86/
+**/bin/
+**/obj/
+**/out/
+
+# ============ Visual Studio 파일들 ============
+# VS IDE 관련
+.vs/
+*.user
+*.vcxproj.user
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+
+# IntelliSense 관련
+*.ipch
+*.aps
+*.aps
+
+# ============ 컴파일된 파일들 ============
+# 실행 파일
+*.exe
+*.dll
+*.so
+*.dylib
+
+# 라이브러리 파일
+*.lib
+*.a
+*.exp
+
+# 오브젝트 파일
+*.obj
+*.o
+
+# 디버깅 파일
+*.pdb
+*.ilk
+*.idb
+*.map
+
+# 프리컴파일된 헤더
+*.pch
+*.gch
+
+# 링커 파일
+*.tlog
+
+# ============ 로그 및 리포트 파일 ============
+*.log
+*.json
+*.xml
+*.csv
+
+# ============ CMake 관련 ============
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+CMakeScripts/
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# ============ 백업 및 임시 파일 ============
+*.tmp
+*.temp
+*.bak
+*~
+*.swp
+*.swo
+*#
+
+# ============ 운영체제별 파일 ============
+# Windows OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux OS
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ============ 에디터별 파일 ============
+# Visual Studio Code
+.vscode/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.un~
+Session.vim
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ============ 개발 도구별 파일 ============
+# Git
+*.orig
+*.rej
+
+# 패키지 매니저
+packages/
+node_modules/
+*.nupkg
+
+# ============ 프로젝트별 커스텀 파일 ============
+# 실행 스크립트
+*.bat
+
+# ============ 개발자별 설정 파일 ============
+# 개인 설정 파일들
+config.local.*
+settings.local.*
+*.local
+
+# IDE 워크스페이스
+*.workspace
+*.session
+
+# ============ 보안 관련 ============
+# API 키나 비밀번호가 포함될 수 있는 파일들
+secrets.*
+credentials.*
+*.key
+*.pem
+*.crt
+*.p12
+*.ini
+config.ini
+
+# ============ 예외 처리 ============
+!/**/Builder.json
+!/**/ReleaseNote.txt
+!/**/_BuildAll
+!/**/_BuildMon47
+!/**/_RunMon47
+!/**/_CleanMon47
