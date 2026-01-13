@@ -9,6 +9,6 @@
   </Configurations>
   <Project Path="../../sutra/Src/_SutraFramework/_SutraFramework.vcxproj" Id="f58ba9ba-f8ac-49e4-8b20-5d39f80a925d" />
   <Project Path="../../sutra/Src/_SutraMain/_SutraMain.vcxproj" Id="ac11efcd-7b4b-44a6-8f9c-3304bf8c0e3e" />
-  <Project Path="mon47.core/mon47.core.vcxproj" Id="f43629ad-9120-4bd6-b1c3-86f8419a1c3a" />
-  <Project Path="mon47.sutra/mon47.sutra.vcxproj" Id="df62e4ec-0d44-41f0-8f3e-4ddaadb91d34" />
+  <Project Path="../Src/mon47.core/mon47.core.vcxproj" Id="f43629ad-9120-4bd6-b1c3-86f8419a1c3a" />
+  <Project Path="mon47Test/mon47Test.vcxproj" Id="84614821-a390-4592-848c-9cc5ac67f1ae" />
 </Solution>

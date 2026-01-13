@@ -1,7 +1,7 @@
-ï»¿#include "pch.h"
+#include "pch.h"
 #include "Constants.h"
 
-// ê° í”„ë¡œí† ì½œë³„ ê¸°ë³¸ í¬íŠ¸ ë§µ
+// °¢ ÇÁ·ÎÅäÄİº° ±âº» Æ÷Æ® ¸Ê
 std::map<std::tstring, WORD> g_DefaultPort =
 {
     // Web & File Transfer
@@ -73,7 +73,7 @@ std::map<std::tstring, WORD> g_DefaultPort =
 
 const std::unordered_map<std::tstring, std::tstring> g_CdnList =
 {
-    // ==================== ê¸€ë¡œë²Œ Top-Tier CDN ==================== //
+    // ==================== ±Û·Î¹ú Top-Tier CDN ==================== //
     {TEXT(".cloudfront.net"), TEXT("Amazon CloudFront")},
     {TEXT(".awsglobalaccelerator.com"), TEXT("AWS Global Accelerator")},
     {TEXT(".cloudflare.net"), TEXT("Cloudflare CDN")},
@@ -99,7 +99,7 @@ const std::unordered_map<std::tstring, std::tstring> g_CdnList =
     {TEXT(".gslb.taobao.com"), TEXT("Alibaba Cloud CDN")},
     {TEXT(".gcdn.co"), TEXT("Google Cloud CDN")},
 
-    // ==================== í´ë¼ìš°ë“œ ìŠ¤í† ë¦¬ì§€ ==================== //
+    // ==================== Å¬¶ó¿ìµå ½ºÅä¸®Áö ==================== //
     {TEXT(".s3.amazonaws.com"), TEXT("Amazon S3")},
     {TEXT(".s3-website"), TEXT("Amazon S3 Static Website")},
     {TEXT(".awsstatic.com"), TEXT("AWS Static Resources")},
@@ -116,7 +116,7 @@ const std::unordered_map<std::tstring, std::tstring> g_CdnList =
     {TEXT(".backblazeb2.com"), TEXT("Backblaze B2")},
     {TEXT(".wasabisys.com"), TEXT("Wasabi Hot Cloud Storage")},
 
-    // ==================== ì—£ì§€/ì„œë²„ë¦¬ìŠ¤ ë° ê¸°íƒ€ ==================== //
+    // ==================== ¿§Áö/¼­¹ö¸®½º ¹× ±âÅ¸ ==================== //
     {TEXT(".netlify.app"), TEXT("Netlify")},
     {TEXT(".vercel.app"), TEXT("Vercel")},
     {TEXT(".render.com"), TEXT("Render")},
@@ -127,7 +127,7 @@ const std::unordered_map<std::tstring, std::tstring> g_CdnList =
     {TEXT(".r2.cloudflarestorage.com"), TEXT("Cloudflare R2")}
 };
 
-// ==================== URL ë‹¨ì¶• ì„œë¹„ìŠ¤ ëª©ë¡ ==================== //
+// ==================== URL ´ÜÃà ¼­ºñ½º ¸ñ·Ï ==================== //
 const std::unordered_set<std::tstring> g_ShortUrlList =
 {
     TEXT("bit.ly"), TEXT("tinyurl.com"), TEXT("goo.gl"), TEXT("ow.ly"), TEXT("t.co"),
@@ -136,32 +136,32 @@ const std::unordered_set<std::tstring> g_ShortUrlList =
     TEXT("bl.ink"), TEXT("lnkd.in"), TEXT("s.id"), TEXT("tiny.cc"), TEXT("rb.gy"), TEXT("v.gd"),
     TEXT("shorturl.at"), TEXT("1url.com"), TEXT("2.gp"), TEXT("x.co"), TEXT("prettylinkpro.com"),
 
-    // ì§€ì—­ë³„ ì„œë¹„ìŠ¤
+    // Áö¿ªº° ¼­ºñ½º
     TEXT("han.gl"), TEXT("me2.do"), TEXT("me2.kr"), TEXT("ur.ly"), TEXT("u.nu"), TEXT("kl.am"), TEXT("j.mp"),
     TEXT("po.st"), TEXT("scrnch.me"), TEXT("fifo.cc"), TEXT("tr.im"),
 
-    // ì†Œì…œë¯¸ë””ì–´ í†µí•©
+    // ¼Ò¼È¹Ìµğ¾î ÅëÇÕ
     TEXT("soo.gd"), TEXT("budurl.com"), TEXT("snip.ly"), TEXT("ity.im"), TEXT("cli.gs"),
 
-    // QR ì½”ë“œ
+    // QR ÄÚµå
     TEXT("qr.net"), TEXT("qr.ae"), TEXT("qr-code.link"),
 
-    // ë¹„ì¦ˆë‹ˆìŠ¤/ë§ˆì¼€íŒ…
+    // ºñÁî´Ï½º/¸¶ÄÉÆÃ
     TEXT("sniply.io"), TEXT("hyperurl.co"), TEXT("smarturl.it"), TEXT("ouo.io"), TEXT("ouo.press"),
 
-    // ìµëª…
+    // ÀÍ¸í
     TEXT("anonymiz.com"), TEXT("anon.to"), TEXT("anon.ws"), TEXT("hide.me/go"),
     TEXT("t.ly"), TEXT("tny.im"), TEXT("u.to"), TEXT("chilp.it"), TEXT("bc.vc"),
 
-    // ì¶”ì /ë¶„ì„ í†µí•©
+    // ÃßÀû/ºĞ¼® ÅëÇÕ
     TEXT("clickmeter.com"), TEXT("snip.li"), TEXT("snipr.com"), TEXT("fur.ly"),
 
-    // ì¶”ê°€ ì•…ìš© ë¹ˆë²ˆ ì„œë¹„ìŠ¤
+    // Ãß°¡ ¾Ç¿ë ºó¹ø ¼­ºñ½º
     TEXT("shortcm.li"), TEXT("zws.im"), TEXT("goo.su"), TEXT("qps.ru"), TEXT("u.bb"),
     TEXT("tiny.one"), TEXT("gg.gg"), TEXT("dub.sh"), TEXT("dub.co"), TEXT("s2r.co"),
     TEXT("shorter.me"), TEXT("miniurl.be"), TEXT("tinu.be"), TEXT("vztc.com"),
 
-    // ìµœì‹  ì„œë¹„ìŠ¤
+    // ÃÖ½Å ¼­ºñ½º
     TEXT("spoo.me"), TEXT("clck.ru"), TEXT("vo.la"), TEXT("fox.ly"), TEXT("lstu.fr"),
     TEXT("kurzelinks.de"), TEXT("t2m.io"), TEXT("shrtco.de"), TEXT("shrt.li"), TEXT("1link.in"),
     TEXT("hyperlink.ly"), TEXT("urlz.fr"), TEXT("2tu.us"), TEXT("turl.ca"), TEXT("gurl.ly"),
@@ -171,25 +171,25 @@ const std::unordered_set<std::tstring> g_ShortUrlList =
     TEXT("cutit.org"), TEXT("shink.in"), TEXT("exe.io"), TEXT("linkvertise.com"),
     TEXT("bc.vc"), TEXT("adfly.com"), TEXT("link1s.com"), TEXT("ouo.press")
 
-    // í•œêµ­ ì„œë¹„ìŠ¤
+    // ÇÑ±¹ ¼­ºñ½º
     TEXT("han.gl"), TEXT("me2.do"), TEXT("vo.la"), TEXT("gplinks.in"),
     TEXT("han.gl"), TEXT("bitly.kr"), TEXT("shorturl.kr"),
 };
 
-// ==================== URL ë‹¨ì¶• ì„œë¹„ìŠ¤ ëª©ë¡ ==================== //
+// ==================== URL ´ÜÃà ¼­ºñ½º ¸ñ·Ï ==================== //
 const std::unordered_set<std::tstring> g_SuspiciousTldList =
 {
-    // ìì£¼ ì•…ì„±ìœ¼ë¡œ ë³´ì´ëŠ” TLD
+    // ÀÚÁÖ ¾Ç¼ºÀ¸·Î º¸ÀÌ´Â TLD
     TEXT("xyz"), TEXT("top"), TEXT("club"), TEXT("loan"), TEXT("work"), TEXT("monster"), TEXT("pw"), TEXT("icu"), TEXT("cyou"),
     TEXT("buzz"), TEXT("gq"), TEXT("cf"), TEXT("ga"), TEXT("ml"), TEXT("tk"), TEXT("uno"), TEXT("sbs"), TEXT("cn"), TEXT("ru"), TEXT("shop"),
     TEXT("zip"), TEXT("mov"),
 
-    // ë¬´ë£Œ/ì €ê°€ TLD
+    // ¹«·á/Àú°¡ TLD
     TEXT("free"), TEXT("ooo"), TEXT("bar"), TEXT("rest"), TEXT("cam"), TEXT("pics"), TEXT("mom"), TEXT("lol"),
     TEXT("rocks"), TEXT("ninja"), TEXT("party"), TEXT("trade"), TEXT("date"), TEXT("racing"), TEXT("accountant"),
     TEXT("science"), TEXT("gdn"), TEXT("men"), TEXT("faith"), TEXT("download"), TEXT("webcam"),
 
-    // ìƒˆë¡œìš´ TLD
+    // »õ·Î¿î TLD
     TEXT("bond"), TEXT("country"), TEXT("stream"), TEXT("download"), TEXT("security"), TEXT("mobile"),
     TEXT("hair"), TEXT("christmas"), TEXT("review"), TEXT("space"), TEXT("website"), TEXT("site"), TEXT("online"),
     TEXT("tech"), TEXT("store"), TEXT("fun"), TEXT("tokyo"), TEXT("win"), TEXT("bid"), TEXT("link"), TEXT("click"),
@@ -208,17 +208,17 @@ const std::unordered_set<std::tstring> g_SuspiciousTldList =
     TEXT("insurance"), TEXT("lawyer"), TEXT("legal"), TEXT("law"),
     TEXT("study"), TEXT("degree"), TEXT("education"), TEXT("school"), TEXT("university"),
 
-    // ìì£¼ ì•…ìš©ë˜ëŠ” êµ­ê°€ tld
-    TEXT("tk"), TEXT("ml"), TEXT("ga"), TEXT("cf"), TEXT("gq"),                       // ë¬´ë£Œ TLD
-    TEXT("ru"), TEXT("cn"), TEXT("in"), TEXT("br"), TEXT("ly"), TEXT("ph"), TEXT("nf"), TEXT("su"),     // ê·œì œ ì•½í•œ êµ­ê°€
+    // ÀÚÁÖ ¾Ç¿ëµÇ´Â ±¹°¡ tld
+    TEXT("tk"), TEXT("ml"), TEXT("ga"), TEXT("cf"), TEXT("gq"),                       // ¹«·á TLD
+    TEXT("ru"), TEXT("cn"), TEXT("in"), TEXT("br"), TEXT("ly"), TEXT("ph"), TEXT("nf"), TEXT("su"),     // ±ÔÁ¦ ¾àÇÑ ±¹°¡
     TEXT("pw"), TEXT("vu"), TEXT("ws"), TEXT("ms"), TEXT("gs"), TEXT("cx"), TEXT("sx"), TEXT("ax"),
     TEXT("bz"), TEXT("ag"), TEXT("sc"), TEXT("mn"), TEXT("la"), TEXT("cd"), TEXT("dj"), TEXT("st")
 
-    // ì•”í˜¸í™”í ê´€ë ¨ ì•…ìš©
+    // ¾ÏÈ£È­Æó °ü·Ã ¾Ç¿ë
     TEXT("crypto"), TEXT("nft"), TEXT("blockchain"), TEXT("finance"), TEXT("money"), TEXT("cash"), TEXT("pay"),
 
 
-    // í”¼ì‹±, ìŠ¤íŒ¸ì—ì„œ ìì£¼ ì‹ë³„
+    // ÇÇ½Ì, ½ºÆÔ¿¡¼­ ÀÚÁÖ ½Äº°
     TEXT("gives"), TEXT("phone"), TEXT("email"), TEXT("chat"), TEXT("webcam"), TEXT("cam"),
     TEXT("center"), TEXT("centre"), TEXT("agency"), TEXT("company"), TEXT("corporation"),
     TEXT("group"), TEXT("holdings"), TEXT("ventures"), TEXT("capital"), TEXT("partners"),
@@ -226,7 +226,7 @@ const std::unordered_set<std::tstring> g_SuspiciousTldList =
     TEXT("social"), TEXT("community"), TEXT("forum"), TEXT("club"), TEXT("group"),
 };
 
-// ==================== ì˜ì‹¬ìŠ¤ëŸ¬ìš´ TLD ì¤‘ ì‹ ë¢°í•˜ëŠ” í•­ëª© ==================== //
+// ==================== ÀÇ½É½º·¯¿î TLD Áß ½Å·ÚÇÏ´Â Ç×¸ñ ==================== //
 const std::unordered_set<std::tstring> g_TrustedTldList =
 {
     TEXT("velog.io"),
@@ -236,56 +236,56 @@ const std::unordered_set<std::tstring> g_TrustedTldList =
     TEXT("vercel.com")
 };
 
-// ==================== ì˜ì‹¬ìŠ¤ëŸ¬ìš´ path í•­ëª© ==================== //
+// ==================== ÀÇ½É½º·¯¿î path Ç×¸ñ ==================== //
 const std::unordered_set<std::tstring> g_SuspiciousPathList =
 {
-    // ê³„ì • ì •ë³´ ê´€ë ¨
+    // °èÁ¤ Á¤º¸ °ü·Ã
     TEXT("reset-password"), TEXT("resetpassword"), TEXT("change-password"),
     TEXT("credential"), TEXT("credentials"),
     TEXT("recovery"), TEXT("recover"), TEXT("restore"), TEXT("unlock"), TEXT("reactivate"),
     TEXT("mfa"), TEXT("2fa"), TEXT("otp"), TEXT("twofa"), TEXT("two-factor"), TEXT("multi-factor"),
 
-    // í”ì¹˜ ì•Šì€ íŒŒì¼/ë‹¤ìš´ë¡œë“œ ê´€ë ¨
+    // ÈçÄ¡ ¾ÊÀº ÆÄÀÏ/´Ù¿î·Îµå °ü·Ã
     TEXT("crack"), TEXT("cracked"), TEXT("keygen"), TEXT("serial"), TEXT("activator"), TEXT("activation"),
     TEXT("nulled"), TEXT("warez"), TEXT("torrent"), TEXT("magnet"),
 
-    // ê¸´ê¸‰/ë³´ì•ˆ ìœ„ì¥ ê´€ë ¨
+    // ±ä±Ş/º¸¾È À§Àå °ü·Ã
     TEXT("vulnerability"), TEXT("vulnerable"), TEXT("exploit"), TEXT("breach"), TEXT("hacked"),
     TEXT("fraud"), TEXT("scam"),
     TEXT("compromised"), TEXT("compromise"), TEXT("infected"), TEXT("infection"),
     TEXT("urgent"), TEXT("immediate"), TEXT("action-required"), TEXT("action_required"), TEXT("required-action"),
 
-    // ê¸ˆìœµ ê´€ë ¨
+    // ±İÀ¶ °ü·Ã
     TEXT("invoice-overdue"), TEXT("invoice-pending"), TEXT("payment-overdue"),
     TEXT("wire"), TEXT("wiretransfer"),
     TEXT("wallet"), TEXT("crypto-wallet"), TEXT("cryptowallet"),
 
-    // ì†Œì…œ ì—”ì§€ë‹ˆì–´ë§/ë¯¸ë¼
+    // ¼Ò¼È ¿£Áö´Ï¾î¸µ/¹Ì³¢
     TEXT("winner"), TEXT("winners"), TEXT("won"), TEXT("lottery"), TEXT("sweepstakes"),
     TEXT("claim-airdrop"), TEXT("claim-reward"), TEXT("claim-token"),
 
-    // ì•”í˜¸í™”í/NFT/Web3
+    // ¾ÏÈ£È­Æó/NFT/Web3
     TEXT("metamask"), TEXT("trust-wallet"), TEXT("trustwallet"),
     TEXT("connect-wallet"), TEXT("connectwallet"), TEXT("sign-transaction"),
     TEXT("seed-phrase"), TEXT("recovery-phrase"), TEXT("private-key"), TEXT("mnemonic"),
 
-    // í´ë¼ìš°ë“œ/SaaS
+    // Å¬¶ó¿ìµå/SaaS
     TEXT("admin"), TEXT("administrator"), TEXT("console"),
     TEXT("webhook"), TEXT("callback"),
 
-    // ì•…ì„± í–‰ìœ„ ì§€í‘œ
+    // ¾Ç¼º ÇàÀ§ ÁöÇ¥
     TEXT("shell"), TEXT("cmd"), TEXT("exec"), TEXT("execute"), TEXT("exploit"),
     TEXT("backdoor"), TEXT("reverse-shell"), TEXT("bind-shell"), TEXT("webshell"),
     TEXT("uploader"), TEXT("filemanager"), TEXT("file-manager"),
     TEXT("eval"), TEXT("base64"), TEXT("decode"), TEXT("decrypt"), TEXT("obfuscate"),
 
-    // AI/ML ì„œë¹„ìŠ¤ ê´€ë ¨
+    // AI/ML ¼­ºñ½º °ü·Ã
     TEXT("api-key"),
 
-    // Web3/ë¸”ë¡ì²´ì¸ ì¶”ê°€ í‚¤ì›Œë“œ
+    // Web3/ºí·ÏÃ¼ÀÎ Ãß°¡ Å°¿öµå
     TEXT("free-token"), TEXT("bonus-token"),
 
-    // í”¼ì‹± ê³µê²© ìµœì‹  íŠ¸ë Œë“œ
+    // ÇÇ½Ì °ø°İ ÃÖ½Å Æ®·»µå
     TEXT("account-suspended"), TEXT("account-locked"), TEXT("account-disabled"),
     TEXT("unusual-activity"), TEXT("unusual-login"), TEXT("unrecognized-device"),
     TEXT("identity-verification"), TEXT("verify-identity"), TEXT("verify-now"),
@@ -293,27 +293,27 @@ const std::unordered_set<std::tstring> g_SuspiciousPathList =
     TEXT("prize-claim"), TEXT("lottery-winner"), TEXT("inheritance"), TEXT("beneficiary"),
     TEXT("court-notice"), TEXT("legal-notice"), TEXT("subpoena"), TEXT("warrant"),
 
-    // -------------------- ë¹„ì¦ˆë‹ˆìŠ¤ ì´ë©”ì¼ ì¹¨í•´ (BEC) ê´€ë ¨ -------------------- //
+    // -------------------- ºñÁî´Ï½º ÀÌ¸ŞÀÏ Ä§ÇØ (BEC) °ü·Ã -------------------- //
     TEXT("ceo-urgent"), TEXT("cfo-request"), TEXT("wire-transfer-urgent"), TEXT("payment-urgent"),
     TEXT("vendor-update"), TEXT("banking-update"), TEXT("account-update-required"),
 
-    // -------------------- ëœì„¬ì›¨ì–´/ì•…ì„±ì½”ë“œ ê´€ë ¨ -------------------- //
+    // -------------------- ·£¼¶¿ş¾î/¾Ç¼ºÄÚµå °ü·Ã -------------------- //
     TEXT("decrypt-files"), TEXT("recovery-key"), TEXT("decryption-key"), TEXT("ransom"),
     TEXT("bitcoin-payment"), TEXT("crypto-payment"), TEXT("payment-deadline"),
     TEXT("files-encrypted"), TEXT("data-locked"), TEXT("restore-access"),
 
-    // -------------------- ìµœì‹  ì†Œì…œ ì—”ì§€ë‹ˆì–´ë§ -------------------- //
+    // -------------------- ÃÖ½Å ¼Ò¼È ¿£Áö´Ï¾î¸µ -------------------- //
     TEXT("act-now"), TEXT("expires-soon"), TEXT("last-chance"),
     TEXT("verify-email-now"), TEXT("confirm-email-now"),
     TEXT("security-alert"), TEXT("security-warning"), TEXT("breach-notification"),
     TEXT("data-breach"), TEXT("password-reset-required"), TEXT("change-password-now"),
     TEXT("unauthorized-access"), TEXT("suspicious-login"),
 
-    // -------------------- í´ë¼ìš°ë“œ/DevOps ê³µê²© -------------------- //
+    // -------------------- Å¬¶ó¿ìµå/DevOps °ø°İ -------------------- //
     TEXT("gitlab-token"), TEXT("github-token"),
     TEXT("secrets"), TEXT("credentials-manager"), TEXT("vault"), TEXT("key-vault"),
 
-    // -------------------- ëª¨ë°”ì¼ ì•± ê´€ë ¨ -------------------- //
+    // -------------------- ¸ğ¹ÙÀÏ ¾Û °ü·Ã -------------------- //
     TEXT("apk-download"),
 };
 
@@ -326,66 +326,66 @@ const std::unordered_set<std::tstring> g_DocExt =
     TEXT("xls"), TEXT("xlsx"), TEXT("xlsm"), TEXT("xotm"),
 };
 
-// ==================== ì‹¤í–‰ íŒŒì¼ í™•ì¥ì ëª©ë¡ ==================== //
+// ==================== ½ÇÇà ÆÄÀÏ È®ÀåÀÚ ¸ñ·Ï ==================== //
 const std::unordered_set<std::tstring> g_ExcutableList =
 {
-    // Windows ì‹¤í–‰ íŒŒì¼
+    // Windows ½ÇÇà ÆÄÀÏ
     TEXT("exe"), TEXT("dll"), TEXT("scr"), TEXT("com"), TEXT("pif"), TEXT("msi"), TEXT("msp"), TEXT("cpl"), TEXT("ocx"),
-    TEXT("ax"), TEXT("sys"), TEXT("drv"),                                             // ë“œë¼ì´ë²„
+    TEXT("ax"), TEXT("sys"), TEXT("drv"),                                             // µå¶óÀÌ¹ö
 
-    // Windows ìŠ¤í¬ë¦½íŠ¸ ë° ë°”ë¡œê°€ê¸°
-    TEXT("bat"), TEXT("cmd"), TEXT("vbs"), TEXT("vbe"), TEXT("js"), TEXT("jse"), TEXT("ps1"), TEXT("psm1"),        // PowerShell ëª¨ë“ˆ
-    TEXT("wsf"), TEXT("wsh"), TEXT("hta"), TEXT("lnk"), TEXT("url"), TEXT("inf"), TEXT("reg"),               // ë ˆì§€ìŠ¤íŠ¸ë¦¬
+    // Windows ½ºÅ©¸³Æ® ¹× ¹Ù·Î°¡±â
+    TEXT("bat"), TEXT("cmd"), TEXT("vbs"), TEXT("vbe"), TEXT("js"), TEXT("jse"), TEXT("ps1"), TEXT("psm1"),        // PowerShell ¸ğµâ
+    TEXT("wsf"), TEXT("wsh"), TEXT("hta"), TEXT("lnk"), TEXT("url"), TEXT("inf"), TEXT("reg"),               // ·¹Áö½ºÆ®¸®
 
-    // macOS ì‹¤í–‰ íŒŒì¼ ë° íŒ¨í‚¤ì§€
+    // macOS ½ÇÇà ÆÄÀÏ ¹× ÆĞÅ°Áö
     TEXT("app"), TEXT("dmg"), TEXT("pkg"), TEXT("mpkg"), TEXT("command"), TEXT("action"), TEXT("workflow"),
     TEXT("macho"), TEXT("dylib"), TEXT("bundle"), TEXT("kext"),
 
-    // Linux ë° í¬ë¡œìŠ¤í”Œë«í¼
-    TEXT("sh"), TEXT("bash"), TEXT("zsh"), TEXT("fish"), TEXT("ksh"), TEXT("csh"),                     // ì…¸ ìŠ¤í¬ë¦½íŠ¸
-    TEXT("run"), TEXT("bin"), TEXT("elf"), TEXT("out"),                                    // ë°”ì´ë„ˆë¦¬
+    // Linux ¹× Å©·Î½ºÇÃ·§Æû
+    TEXT("sh"), TEXT("bash"), TEXT("zsh"), TEXT("fish"), TEXT("ksh"), TEXT("csh"),                     // ¼Ğ ½ºÅ©¸³Æ®
+    TEXT("run"), TEXT("bin"), TEXT("elf"), TEXT("out"),                                    // ¹ÙÀÌ³Ê¸®
     TEXT("py"), TEXT("pyc"), TEXT("pyo"), TEXT("pyw"), TEXT("pyz"),                              // Python
     TEXT("pl"), TEXT("pm"), TEXT("t"), TEXT("pod"),                                        // Perl
     TEXT("rb"), TEXT("rbw"),                                                   // Ruby
     TEXT("jar"), TEXT("war"), TEXT("ear"), TEXT("jad"),                                    // Java
     TEXT("deb"), TEXT("rpm"), TEXT("snap"), TEXT("flatpak"), TEXT("AppImage"),
 
-    //// ì••ì¶• íŒŒì¼
+    //// ¾ĞÃà ÆÄÀÏ
     //TEXT("zip"), TEXT("rar"), TEXT("7z"), TEXT("tar"), TEXT("gz"), TEXT("bz2"), TEXT("xz"), TEXT("tgz"), TEXT("tbz2"),
     //TEXT("cab"), TEXT("arj"), TEXT("lzh"), TEXT("ace"), TEXT("zoo"), TEXT("arc"), TEXT("pak"), TEXT("sit"), TEXT("sitx"),
     //TEXT("zipx"), TEXT("s7z"), TEXT("wim"), TEXT("swm"),
 
-    //// ë””ìŠ¤í¬ ì´ë¯¸ì§€
+    //// µğ½ºÅ© ÀÌ¹ÌÁö
     //TEXT("iso"), TEXT("img"), TEXT("bin"), TEXT("nrg"), TEXT("mdf"), TEXT("mds"), TEXT("toast"),
-    //TEXT("vhd"), TEXT("vhdx"), TEXT("vmdk"), TEXT("vdi"), TEXT("qcow"), TEXT("qcow2"),                 // ê°€ìƒ ë””ìŠ¤í¬
+    //TEXT("vhd"), TEXT("vhdx"), TEXT("vmdk"), TEXT("vdi"), TEXT("qcow"), TEXT("qcow2"),                 // °¡»ó µğ½ºÅ©
 
-    // ëª¨ë°”ì¼
+    // ¸ğ¹ÙÀÏ
     TEXT("apk"), TEXT("ipa"), TEXT("xap"), TEXT("appx"), TEXT("aab"),                            // Android, iOS, Windows Phone
 
-    //// ì»¨í…Œì´ë„ˆ/ê°€ìƒí™”
+    //// ÄÁÅ×ÀÌ³Ê/°¡»óÈ­
     //TEXT("ova"), TEXT("ovf"), TEXT("docker"), TEXT("dockerfile"),
 
-    // ìŠ¤í¬ë¦½íŠ¸ ì–¸ì–´
+    // ½ºÅ©¸³Æ® ¾ğ¾î
     TEXT("lua"), TEXT("tcl"), TEXT("awk"), TEXT("sed"),
     TEXT("r"), TEXT("jl"),                                                     // R, Julia
 
-    //// ë°ì´í„°ë² ì´ìŠ¤/ì„¤ì •
+    //// µ¥ÀÌÅÍº£ÀÌ½º/¼³Á¤
     //TEXT("sql"), TEXT("db"), TEXT("sqlite"), TEXT("mdb"), TEXT("accdb"),
-    //TEXT("xml"), TEXT("config"), TEXT("conf"), TEXT("ini"), TEXT("plist"),                       // ì„¤ì • íŒŒì¼
+    //TEXT("xml"), TEXT("config"), TEXT("conf"), TEXT("ini"), TEXT("plist"),                       // ¼³Á¤ ÆÄÀÏ
 
-    // ê¸°íƒ€ ì‹¤í–‰ ê°€ëŠ¥
-    TEXT("gadget"), TEXT("msi"), TEXT("msu"), TEXT("mst"),                                 // Windows ì—…ë°ì´íŠ¸/ê°€ì ¯
+    // ±âÅ¸ ½ÇÇà °¡´É
+    TEXT("gadget"), TEXT("msi"), TEXT("msu"), TEXT("mst"),                                 // Windows ¾÷µ¥ÀÌÆ®/°¡Á¬
     TEXT("application"), TEXT("air"),                                          // Adobe AIR
     TEXT("action"), TEXT("workflow"),                                          // Automator
     TEXT("scpt"), TEXT("scptd"), TEXT("applescript")                                 // AppleScript
 };
 
-// ==================== ë§¤í¬ë¡œ í¬í•¨ ë¬¸ì„œ ==================== //
+// ==================== ¸ÅÅ©·Î Æ÷ÇÔ ¹®¼­ ==================== //
 const std::unordered_set<std::tstring> g_MacroDocList =
 {
     TEXT("docm"), TEXT("xlsm"), TEXT("pptm"), TEXT("dotm"), TEXT("xltm"), TEXT("potm"), TEXT("ppsm"), TEXT("sldm"),
     TEXT("rtf"), TEXT("one"), TEXT("pub"), TEXT("vsd"),                                    // RTF, OneNote, Publisher, Visio
-    TEXT("odt"), TEXT("ods"), TEXT("odp"), TEXT("odg"),                                    // OpenDocument (ë§¤í¬ë¡œ ê°€ëŠ¥)
+    TEXT("odt"), TEXT("ods"), TEXT("odp"), TEXT("odg"),                                    // OpenDocument (¸ÅÅ©·Î °¡´É)
 };
 
 const std::vector<std::tstring> g_WebVulnList =
@@ -402,7 +402,7 @@ const std::vector<std::tstring> g_WebVulnList =
     TEXT("<img>"), TEXT("<img "), TEXT("src="), TEXT("<iframe>"), TEXT("<iframe "), TEXT("<svg>"), TEXT("<svg "),
     TEXT("<body>"), TEXT("<body "), TEXT("<video>"), TEXT("<audio>"), TEXT("<embed>"), TEXT("<object>"),
     TEXT("<input"), TEXT("<form"), TEXT("<link"), TEXT("<meta"), TEXT("<style>"), TEXT("<base"),
-    TEXT("expression("), TEXT("import("), TEXT("&#"), TEXT("\\x"), TEXT("\\u"),                  // ì¸ì½”ë”© ìš°íšŒ
+    TEXT("expression("), TEXT("import("), TEXT("&#"), TEXT("\\x"), TEXT("\\u"),                  // ÀÎÄÚµù ¿ìÈ¸
 
     // SQL Injection
     TEXT("' or '"), TEXT("'or'"), TEXT("' or 1=1"), TEXT("' or '1'='1"), TEXT("' or true--"),
@@ -434,7 +434,7 @@ const std::vector<std::tstring> g_WebVulnList =
     TEXT("/bin/bash"), TEXT("/bin/sh"), TEXT("/usr/bin"),
 
     // Path Traversal / LFI
-    TEXT("../"), TEXT("..\\"), TEXT("..%2f"), TEXT("..%5c"), TEXT("..%252f"),                        // URL ì¸ì½”ë”©
+    TEXT("../"), TEXT("..\\"), TEXT("..%2f"), TEXT("..%5c"), TEXT("..%252f"),                        // URL ÀÎÄÚµù
     TEXT(".%2e/"), TEXT(".%2e\\"), TEXT("%2e%2e/"), TEXT("%2e%2e\\"),
     TEXT("....//"), TEXT("....\\\\"),
     TEXT("/etc/passwd"), TEXT("/etc/shadow"), TEXT("/proc/self/environ"),
@@ -448,9 +448,9 @@ const std::vector<std::tstring> g_WebVulnList =
     TEXT("file://"), TEXT("http://"), TEXT("ftp://"), TEXT("expect://"), TEXT("php://"),
 
     // SSRF (Server-Side Request Forgery)
-    TEXT("localhost"), TEXT("127.0.0.1"), TEXT("0.0.0.0"), TEXT("[::]"), TEXT("0177.0.0.1"),        // ë¡œì»¬ ì£¼ì†Œ
-    TEXT("169.254.169.254"),                                                 // AWS ë©”íƒ€ë°ì´í„°
-    TEXT("metadata.google.internal"),                                        // GCP ë©”íƒ€ë°ì´í„°
+    TEXT("localhost"), TEXT("127.0.0.1"), TEXT("0.0.0.0"), TEXT("[::]"), TEXT("0177.0.0.1"),        // ·ÎÄÃ ÁÖ¼Ò
+    TEXT("169.254.169.254"),                                                 // AWS ¸ŞÅ¸µ¥ÀÌÅÍ
+    TEXT("metadata.google.internal"),                                        // GCP ¸ŞÅ¸µ¥ÀÌÅÍ
     TEXT("file://"), TEXT("dict://"), TEXT("gopher://"), TEXT("tftp://"),
 
     // NoSQL Injection
@@ -480,7 +480,7 @@ const std::vector<std::tstring> g_WebVulnList =
     TEXT("__reduce__"), TEXT("__setstate__"), TEXT("pickle"), TEXT("cPickle"),                // Python
     TEXT("unserialize("), TEXT("O:"),                                             // PHP
 
-    // ê¸°íƒ€ ê³µê²© íŒ¨í„´ 
+    // ±âÅ¸ °ø°İ ÆĞÅÏ 
     TEXT("phpinfo("), TEXT("system("), TEXT("passthru("), TEXT("shell_exec("), TEXT("popen("),      // PHP
     TEXT("base64_decode("), TEXT("gzinflate("), TEXT("str_rot13("),
     TEXT("assert("), TEXT("create_function("), TEXT("preg_replace("),
@@ -513,7 +513,7 @@ const std::vector<std::tstring> g_WebVulnList =
     TEXT("Access-Control-Allow-Origin: *"), TEXT("Access-Control-Allow-Credentials: true"),
     TEXT("*."), TEXT("null"), TEXT("evil.com"), TEXT("attacker.com"),
 
-    // CRLF Injection í™•ì¥
+    // CRLF Injection È®Àå
     TEXT("%0d%0a%0d%0a"), TEXT("%0a%0d%0a%0d"), TEXT("\\r\\n\\r\\n"),
     TEXT("\\n\\r\\n\\r"), TEXT("\r\n\r\n"), TEXT("\n\r\n\r"),
 
@@ -578,28 +578,28 @@ const std::vector<std::tstring> g_UserDirectoryList =
 
 const std::unordered_set<std::tstring> g_SensitiveTokenList =
 {
-    // API í‚¤ ê´€ë ¨
+    // API Å° °ü·Ã
     TEXT("apikey"), TEXT("api_key"), TEXT("api-key"), TEXT("key"), TEXT("appkey"), TEXT("app_key"), TEXT("app-key"),
     TEXT("applicationkey"), TEXT("application_key"), TEXT("client_id"), TEXT("clientid"),
     TEXT("consumer_key"), TEXT("consumerkey"),
 
-    // í† í° ê´€ë ¨
+    // ÅäÅ« °ü·Ã
     TEXT("token"), TEXT("access_token"), TEXT("accesstoken"), TEXT("access-token"),
     TEXT("auth_token"), TEXT("authtoken"), TEXT("auth-token"), TEXT("bearer"), TEXT("bearer_token"),
     TEXT("refresh_token"), TEXT("refreshtoken"), TEXT("refresh-token"),
     TEXT("jwt"), TEXT("id_token"), TEXT("idtoken"), TEXT("id-token"),
     TEXT("csrf_token"), TEXT("csrftoken"), TEXT("xsrf_token"),
 
-    // ì„¸ì…˜ ê´€ë ¨
+    // ¼¼¼Ç °ü·Ã
     TEXT("session"), TEXT("sessionid"), TEXT("session_id"), TEXT("session-id"),
     TEXT("sid"), TEXT("phpsessid"), TEXT("jsessionid"), TEXT("aspsessionid"),
     TEXT("connect.sid"), TEXT("laravel_session"),
 
-    // ì¸ì¦ ê´€ë ¨
+    // ÀÎÁõ °ü·Ã
     TEXT("auth"), TEXT("authorization"), TEXT("authentication"),
     TEXT("credential"), TEXT("credentials"), TEXT("cred"), TEXT("creds"),
 
-    // ë¹„ë°€ í‚¤ ê´€ë ¨
+    // ºñ¹Ğ Å° °ü·Ã
     TEXT("secret"), TEXT("secret_key"), TEXT("secretkey"), TEXT("secret-key"),
     TEXT("client_secret"), TEXT("clientsecret"), TEXT("client-secret"),
     TEXT("private_key"), TEXT("privatekey"), TEXT("private-key"),
@@ -607,12 +607,12 @@ const std::unordered_set<std::tstring> g_SensitiveTokenList =
     TEXT("app_secret"), TEXT("appsecret"),
     TEXT("master_key"), TEXT("masterkey"),
 
-    // OAuth ê´€ë ¨
+    // OAuth °ü·Ã
     TEXT("oauth"), TEXT("oauth_token"), TEXT("oauthtoken"), TEXT("oauth-token"),
     TEXT("code"), TEXT("auth_code"), TEXT("authcode"), TEXT("authorization_code"),
     TEXT("grant_type"), TEXT("grant-type"),
 
-    // í´ë¼ìš°ë“œ ì„œë¹„ìŠ¤ í‚¤
+    // Å¬¶ó¿ìµå ¼­ºñ½º Å°
     // AWS
     TEXT("aws_access_key_id"), TEXT("aws_secret_access_key"), TEXT("aws_session_token"),
     TEXT("amazon_access_key"), TEXT("amazon_secret_key"),
@@ -637,16 +637,16 @@ const std::unordered_set<std::tstring> g_SensitiveTokenList =
     // PayPal
     TEXT("paypal_client_id"), TEXT("paypal_secret"),
 
-    // ë°ì´í„°ë² ì´ìŠ¤ ê´€ë ¨
+    // µ¥ÀÌÅÍº£ÀÌ½º °ü·Ã
     TEXT("db_password"), TEXT("database_password"), TEXT("db_pass"),
     TEXT("mysql_password"), TEXT("postgres_password"), TEXT("mongodb_password"),
     TEXT("redis_password"), TEXT("connection_string"), TEXT("database_url"),
 
-    // ì•”í˜¸í™”í ê´€ë ¨
+    // ¾ÏÈ£È­Æó °ü·Ã
     TEXT("wallet_key"), TEXT("private_key"), TEXT("seed_phrase"), TEXT("mnemonic"),
     TEXT("bitcoin_key"), TEXT("ethereum_key"), TEXT("crypto_key"),
 
-    // ê¸°íƒ€
+    // ±âÅ¸
     TEXT("password"), TEXT("passwd"), TEXT("pwd"), TEXT("pass"), TEXT("passphrase"),
     TEXT("signature"), TEXT("sign"), TEXT("verification"), TEXT("verify"),
     TEXT("nonce"), TEXT("salt"), TEXT("hash"), TEXT("hmac"),
@@ -655,109 +655,109 @@ const std::unordered_set<std::tstring> g_SensitiveTokenList =
 
 const std::unordered_set<std::tstring> g_AbnormalUriList =
 {
-    // ìŠ¤í¬ë¦½íŠ¸ ì‹¤í–‰ ê´€ë ¨
+    // ½ºÅ©¸³Æ® ½ÇÇà °ü·Ã
     TEXT("javascript"), TEXT("data"), TEXT("vbscript"), TEXT("livescript"),
 
-    // ë¡œì»¬ ìì› ì ‘ê·¼
+    // ·ÎÄÃ ÀÚ¿ø Á¢±Ù
     TEXT("file"), TEXT("res"), TEXT("resource"), TEXT("mhtml"), TEXT("mk"),
     TEXT("jar"), TEXT("wyciwyg"),
 
-    // ë„¤íŠ¸ì›Œí¬ í”„ë¡œí† ì½œ (ë¹„í‘œì¤€/ìœ„í—˜)
+    // ³×Æ®¿öÅ© ÇÁ·ÎÅäÄİ (ºñÇ¥ÁØ/À§Çè)
     TEXT("ftp"), TEXT("ftps"), TEXT("sftp"), TEXT("tftp"), TEXT("telnet"), TEXT("gopher"), TEXT("dict"),
     TEXT("ldap"), TEXT("ldaps"),
 
     // WebSocket
     TEXT("ws"), TEXT("wss"),
 
-    // ì´ë©”ì¼ ë° í†µì‹ 
+    // ÀÌ¸ŞÀÏ ¹× Åë½Å
     TEXT("mailto"), TEXT("news"), TEXT("nntp"), TEXT("irc"), TEXT("ircs"), TEXT("xmpp"),
     TEXT("sip"), TEXT("sips"), TEXT("tel"), TEXT("sms"), TEXT("mms"),
 
-    // ë¸Œë¼ìš°ì € ë‚´ë¶€
+    // ºê¶ó¿ìÀú ³»ºÎ
     TEXT("about"), TEXT("chrome"), TEXT("edge"), TEXT("safari"), TEXT("opera"), TEXT("firefox"),
     TEXT("moz-extension"), TEXT("chrome-extension"), TEXT("edge-extension"),
     TEXT("browser"), TEXT("view-source"), TEXT("blob"),
 
-    // P2P ë° íŠ¹ìˆ˜ í”„ë¡œí† ì½œ
+    // P2P ¹× Æ¯¼ö ÇÁ·ÎÅäÄİ
     TEXT("magnet"), TEXT("torrent"), TEXT("ed2k"), TEXT("bitcoin"), TEXT("ethereum"),
     TEXT("ipfs"), TEXT("ipns"), TEXT("dat"), TEXT("ssb"),
 
-    // ëª¨ë°”ì¼/ì•± ë”¥ë§í¬
+    // ¸ğ¹ÙÀÏ/¾Û µö¸µÅ©
     TEXT("intent"), TEXT("android-app"), TEXT("ios-app"), TEXT("market"), TEXT("itms"),
     TEXT("itms-apps"), TEXT("whatsapp"), TEXT("fb"), TEXT("twitter"), TEXT("instagram"),
 
-    // ìŠ¤íŠ¸ë¦¬ë° í”„ë¡œí† ì½œ
+    // ½ºÆ®¸®¹Ö ÇÁ·ÎÅäÄİ
     TEXT("rtmp"), TEXT("rtmps"), TEXT("rtsp"), TEXT("rtsps"), TEXT("mms"), TEXT("mmsh"),
 
-    // ê°œë°œ/ë””ë²„ê¹…
+    // °³¹ß/µğ¹ö±ë
     TEXT("sourcemap"), TEXT("webpack"), TEXT("webpack-internal"),
 
-    // ê¸°íƒ€ ìœ„í—˜ í”„ë¡œí† ì½œ
+    // ±âÅ¸ À§Çè ÇÁ·ÎÅäÄİ
     TEXT("callto"), TEXT("skype"), TEXT("zoom"), TEXT("slack"), TEXT("discord"),
     TEXT("steam"), TEXT("git"), TEXT("svn"), TEXT("cvs"),
 
-    // AI/ML ì„œë¹„ìŠ¤ ë”¥ë§í¬
+    // AI/ML ¼­ºñ½º µö¸µÅ©
     TEXT("chatgpt"), TEXT("claude-ai"), TEXT("bard"), TEXT("midjourney"),
 
-    // Web3/ë¸”ë¡ì²´ì¸
+    // Web3/ºí·ÏÃ¼ÀÎ
     TEXT("web3"), TEXT("ethereum"), TEXT("metamask"), TEXT("phantom"), TEXT("coinbase"),
     TEXT("walletconnect"), TEXT("trust"), TEXT("crypto"),
 
-    // ì†Œì…œë¯¸ë””ì–´ ì•± ë”¥ë§í¬
+    // ¼Ò¼È¹Ìµğ¾î ¾Û µö¸µÅ©
     TEXT("tiktok"), TEXT("snapchat"), TEXT("wechat"), TEXT("line"), TEXT("kakao"),
     TEXT("telegram"), TEXT("signal"), TEXT("viber"), TEXT("messenger"),
 
-    // í˜‘ì—… ë„êµ¬
+    // Çù¾÷ µµ±¸
     TEXT("ms-teams"), TEXT("msteams"), TEXT("notion"), TEXT("obsidian"),
     TEXT("evernote"), TEXT("onenote"), TEXT("trello"), TEXT("asana"),
 
-    // ë¹„ì¦ˆë‹ˆìŠ¤/ê²°ì œ
+    // ºñÁî´Ï½º/°áÁ¦
     TEXT("paypal"), TEXT("venmo"), TEXT("cashapp"), TEXT("gpay"), TEXT("paytm"),
 
-    // í´ë¼ìš°ë“œ/íŒŒì¼ ê³µìœ 
+    // Å¬¶ó¿ìµå/ÆÄÀÏ °øÀ¯
     TEXT("dropbox"), TEXT("googledrive"), TEXT("onedrive"), TEXT("box"),
     TEXT("icloud"), TEXT("mega"), TEXT("wetransfer"),
 
-    // ìŠ¤íŠ¸ë¦¬ë°/ë¯¸ë””ì–´
+    // ½ºÆ®¸®¹Ö/¹Ìµğ¾î
     TEXT("spotify"), TEXT("applemusic"), TEXT("youtube"), TEXT("netflix"),
     TEXT("twitch"), TEXT("vimeo"), TEXT("soundcloud"),
 
-    // IoT/ìŠ¤ë§ˆíŠ¸í™ˆ
+    // IoT/½º¸¶Æ®È¨
     TEXT("homekit"), TEXT("alexa"), TEXT("google-home"), TEXT("smartthings"),
     TEXT("ifttt"), TEXT("nest"), TEXT("ring"), TEXT("hue"),
 
     // AR/VR
     TEXT("oculus"), TEXT("vr"), TEXT("ar"), TEXT("spatial"),
 
-    // êµìœ¡
+    // ±³À°
     TEXT("zoom-meeting"), TEXT("teams-meeting"), TEXT("webex-meeting"),
     TEXT("classroom"), TEXT("canvas"), TEXT("blackboard"), TEXT("moodle"),
 
-    // ìœ„ì¹˜/ì§€ë„
+    // À§Ä¡/Áöµµ
     TEXT("maps"), TEXT("waze"), TEXT("uber"), TEXT("lyft"), TEXT("grab"),
 
-    // ìŒì„± ì–´ì‹œìŠ¤í„´íŠ¸
+    // À½¼º ¾î½Ã½ºÅÏÆ®
     TEXT("siri"), TEXT("bixby"), TEXT("cortana"), TEXT("google-assistant"),
 
-    // ë””ë²„ê¹…/ê°œë°œ
+    // µğ¹ö±ë/°³¹ß
     TEXT("adb"), TEXT("debug"), TEXT("devtools"), TEXT("inspector"),
     TEXT("chrome-devtools"), TEXT("edge-devtools"),
 
-    // ë ˆê±°ì‹œ/ë¹„í‘œì¤€ ìœ„í—˜ í”„ë¡œí† ì½œ
+    // ·¹°Å½Ã/ºñÇ¥ÁØ À§Çè ÇÁ·ÎÅäÄİ
     TEXT("finger"), TEXT("nntp"), TEXT("rsync"), TEXT("rlogin"),
     TEXT("rsh"), TEXT("rexec"), TEXT("netbios"), TEXT("smb"),
 
-    // ì‹¤í—˜ì /ë¹„í‘œì¤€
+    // ½ÇÇèÀû/ºñÇ¥ÁØ
     TEXT("gemini"), TEXT("gopher"), TEXT("sparql"), TEXT("xri"),
     TEXT("ni"), TEXT("nih"), TEXT("tag"), TEXT("cap"),
 
-    // ì»¨í…Œì´ë„ˆ/ê°€ìƒí™”
+    // ÄÁÅ×ÀÌ³Ê/°¡»óÈ­
     TEXT("docker"), TEXT("kubernetes"), TEXT("k8s"), TEXT("podman")
 };
 
 const std::unordered_set<std::tstring> g_DangerousParameterList =
 {
-    // ì˜¤í”ˆ ë¦¬ë‹¤ì´ë ‰ì…˜ (Open Redirect)
+    // ¿ÀÇÂ ¸®´ÙÀÌ·º¼Ç (Open Redirect)
     TEXT("redirect"), TEXT("redir"), TEXT("redirect_uri"), TEXT("redirect_url"), TEXT("redirecturl"), TEXT("redirectUri"),
     TEXT("next"), TEXT("nexturl"), TEXT("next_url"), TEXT("nextUrl"),
     TEXT("continue"), TEXT("continueurl"), TEXT("continue_url"), TEXT("continueUrl"),
@@ -770,7 +770,7 @@ const std::unordered_set<std::tstring> g_DangerousParameterList =
     TEXT("callback_url"), TEXT("callbackurl"), TEXT("callbackUrl"),
     TEXT("landing"), TEXT("landing_page"), TEXT("landingpage"),
 
-    // URL/íŒŒì¼ ì ‘ê·¼ (SSRF, LFI, RFI)
+    // URL/ÆÄÀÏ Á¢±Ù (SSRF, LFI, RFI)
     TEXT("url"), TEXT("uri"), TEXT("link"), TEXT("href"), TEXT("src"), TEXT("source"),
     TEXT("path"), TEXT("filepath"), TEXT("file_path"), TEXT("filePath"),
     TEXT("file"), TEXT("filename"), TEXT("file_name"), TEXT("fileName"),
@@ -780,36 +780,36 @@ const std::unordered_set<std::tstring> g_DangerousParameterList =
     TEXT("include"), TEXT("require"), TEXT("read"), TEXT("open"), TEXT("access"),
     TEXT("data"), TEXT("content"), TEXT("body"), TEXT("payload"),
 
-    // ë·°/í…œí”Œë¦¿ ì¡°ì‘
+    // ºä/ÅÛÇÃ¸´ Á¶ÀÛ
     TEXT("view"), TEXT("template"), TEXT("tmpl"), TEXT("tpl"), TEXT("layout"), TEXT("theme"),
     TEXT("render"), TEXT("display"), TEXT("show"),
 
-    // ì½œë°±/ì›¹í›…
+    // Äİ¹é/À¥ÈÅ
     TEXT("callback"), TEXT("callback_url"), TEXT("callbackurl"), TEXT("callbackUrl"),
     TEXT("webhook"), TEXT("webhookurl"), TEXT("webhook_url"), TEXT("notify"), TEXT("notify_url"),
     TEXT("ping"), TEXT("pingback"),
 
-    // API/GraphQL ê´€ë ¨
+    // API/GraphQL °ü·Ã
     TEXT("query"), TEXT("mutation"), TEXT("subscription"),
     TEXT("endpoint"), TEXT("api"), TEXT("api_endpoint"), TEXT("api_url"),
     TEXT("service"), TEXT("service_url"), TEXT("proxy"), TEXT("proxy_url"),
     TEXT("upstream"), TEXT("backend"), TEXT("host"), TEXT("hostname"),
 
-    // ë°ì´í„°ë² ì´ìŠ¤/ì¿¼ë¦¬
+    // µ¥ÀÌÅÍº£ÀÌ½º/Äõ¸®
     TEXT("sql"), TEXT("query"), TEXT("search"), TEXT("filter"), TEXT("where"), TEXT("order"), TEXT("sort"),
     TEXT("limit"), TEXT("offset"), TEXT("skip"), TEXT("take"),
     TEXT("table"), TEXT("collection"), TEXT("index"),
 
-    // íŒŒì¼ ì‹œìŠ¤í…œ
+    // ÆÄÀÏ ½Ã½ºÅÛ
     TEXT("dir"), TEXT("directory"), TEXT("folder"), TEXT("location"),
     TEXT("base"), TEXT("basedir"), TEXT("base_dir"), TEXT("root"), TEXT("rootdir"),
     TEXT("upload_dir"), TEXT("uploaddir"), TEXT("tmp"), TEXT("temp"), TEXT("cache"),
 
-    // ëª…ë ¹ ì‹¤í–‰ ê´€ë ¨
+    // ¸í·É ½ÇÇà °ü·Ã
     TEXT("cmd"), TEXT("command"), TEXT("exec"), TEXT("execute"), TEXT("run"), TEXT("shell"),
     TEXT("script"), TEXT("code"), TEXT("eval"), TEXT("expression"),
 
-    // ê¸°íƒ€ ìœ„í—˜ íŒŒë¼ë¯¸í„°
+    // ±âÅ¸ À§Çè ÆÄ¶ó¹ÌÅÍ
     TEXT("out"), TEXT("output"), TEXT("exit"), TEXT("site"), TEXT("domain"),
     TEXT("referrer"), TEXT("referer"), TEXT("from"), TEXT("origin"),
     TEXT("action"), TEXT("method"), TEXT("function"), TEXT("handler"),
@@ -818,52 +818,52 @@ const std::unordered_set<std::tstring> g_DangerousParameterList =
 
 const std::unordered_set<WORD> g_SuspiciousPortList =
 {
-    // ìœ ëª… ë°±ë„ì–´/íŠ¸ë¡œì´ëª©ë§ˆ í¬íŠ¸
+    // À¯¸í ¹éµµ¾î/Æ®·ÎÀÌ¸ñ¸¶ Æ÷Æ®
     31337,                                              // Back Orifice, Baron Night, BO2K
     12345, 12346,                                       // NetBus, Whack-a-mole
     27374,                                              // Sub Seven
     1243,                                               // Sub Seven (alternative)
-    6666, 6667, 6668, 6669,                             // IRC ë°±ë„ì–´, Vampyre
+    6666, 6667, 6668, 6669,                             // IRC ¹éµµ¾î, Vampyre
 
     // RAT (Remote Access Trojan)
     1337,                                               // WASTE
-    5000, 5001, 5555, 5556,                             // ë‹¤ì–‘í•œ RAT
-    9090,                                               // TeamViewer (ì•…ìš© ê°€ëŠ¥)
-    8080, 8888,                                         // í”„ë¡ì‹œ/ì›¹ ì„œë²„ (ì•…ìš©)
+    5000, 5001, 5555, 5556,                             // ´Ù¾çÇÑ RAT
+    9090,                                               // TeamViewer (¾Ç¿ë °¡´É)
+    8080, 8888,                                         // ÇÁ·Ï½Ã/À¥ ¼­¹ö (¾Ç¿ë)
 
-    // í”„ë¡ì‹œ/í„°ë„ë§/SOCKS
+    // ÇÁ·Ï½Ã/ÅÍ³Î¸µ/SOCKS
     1080,                                               // SOCKS proxy
     3128,                                               // Squid proxy
     8123,                                               // Polipo proxy
     9050, 9051,                                         // Tor SOCKS, Control
 
-    // C2 (Command & Control) ì„œë²„
+    // C2 (Command & Control) ¼­¹ö
     4444,                                               // Metasploit, msfvenom reverse shell
     4445, 4446,                                         // C2 alternatives
     5555,                                               // ADB, C2
     7777,                                               // Oracle, C2
-    8000, 8001, 8008,                                   // ëŒ€ì²´ HTTP
+    8000, 8001, 8008,                                   // ´ëÃ¼ HTTP
     9999, 10000,                                        // C2 common
 
-    // ì•”í˜¸í™”í ì±„êµ´
+    // ¾ÏÈ£È­Æó Ã¤±¼
     3333,                                               // Stratum mining
     3334, 3335,                                         // Alternative Stratum
     8332, 8333,                                         // Bitcoin RPC, P2P
     18332, 18333,                                       // Bitcoin testnet
     9332,                                               // Litecoin
 
-    // ëœì„¬ì›¨ì–´ ê´€ë ¨
-    20, 21, 22,                                         // FTP, SSH (ë°ì´í„° ìœ ì¶œ)
+    // ·£¼¶¿ş¾î °ü·Ã
+    20, 21, 22,                                         // FTP, SSH (µ¥ÀÌÅÍ À¯Ãâ)
     139, 445,                                           // SMB (WannaCry, NotPetya)
-    3389,                                               // RDP (Ransomware ì „íŒŒ)
+    3389,                                               // RDP (Ransomware ÀüÆÄ)
 
-    // IoT ë´‡ë„·
+    // IoT º¿³İ
     23,                                                 // Telnet (Mirai)
     2323,                                               // Telnet alternative
     37215,                                              // Mirai scanner
     48101,                                              // Mirai
 
-    // ë°ì´í„°ë² ì´ìŠ¤ (ë¹„ì •ìƒ ì™¸ë¶€ ë…¸ì¶œ)
+    // µ¥ÀÌÅÍº£ÀÌ½º (ºñÁ¤»ó ¿ÜºÎ ³ëÃâ)
     1433,                                               // MS SQL
     1521,                                               // Oracle
     3306,                                               // MySQL/MariaDB
@@ -875,18 +875,18 @@ const std::unordered_set<WORD> g_SuspiciousPortList =
     9200, 9300,                                         // Elasticsearch
     27017, 27018,                                       // MongoDB
 
-    // ê´€ë¦¬ ì¸í„°í˜ì´ìŠ¤
+    // °ü¸® ÀÎÅÍÆäÀÌ½º
     2082, 2083,                                         // cPanel
     2086, 2087,                                         // WHM
     8443,                                               // Plesk, alternative HTTPS
     10000,                                              // Webmin
 
-    // VPN/í„°ë„
+    // VPN/ÅÍ³Î
     500, 4500,                                          // IPsec
     1194,                                               // OpenVPN
     1701, 1723,                                         // L2TP, PPTP
 
-    // ê¸°íƒ€ ì˜ì‹¬ í¬íŠ¸
+    // ±âÅ¸ ÀÇ½É Æ÷Æ®
     2222,                                               // SSH alternative 
     4443,                                               // HTTPS alternative
     6660, 6661, 6662, 6663, 6664, 6665,                 // IRC (C2)
@@ -895,84 +895,84 @@ const std::unordered_set<WORD> g_SuspiciousPortList =
     9001,                                               // Tor, HSQLDB
     11211,                                              // Memcached (DDoS amplification)
 
-    // DNS over HTTPS/TLS (ìš°íšŒ ì‹œë„)
+    // DNS over HTTPS/TLS (¿ìÈ¸ ½Ãµµ)
     853,                                                // DNS over TLS
 
-    // 2024 ì•…ì„±ì½”ë“œ í¬íŠ¸ 
-    2375, 2376,                                         // Docker API (ì•…ìš©)
+    // 2024 ¾Ç¼ºÄÚµå Æ÷Æ® 
+    2375, 2376,                                         // Docker API (¾Ç¿ë)
     6443,                                               // Kubernetes API
     8000,                                               // Docker registry
     50000,                                              // SAP, Jenkins
 
-    // ì»¨í…Œì´ë„ˆ/ì˜¤ì¼€ìŠ¤íŠ¸ë ˆì´ì…˜
+    // ÄÁÅ×ÀÌ³Ê/¿ÀÄÉ½ºÆ®·¹ÀÌ¼Ç
     2377, 2379, 2380,                                   // Docker Swarm, etcd
     10250, 10255,                                       // Kubelet
     8001, 8002,                                         // Kubernetes alternative APIs
     5000, 5001,                                         // Docker Registry
     9000,                                               // Portainer
 
-    // NoSQL ë°ì´í„°ë² ì´ìŠ¤ ì¶”ê°€
+    // NoSQL µ¥ÀÌÅÍº£ÀÌ½º Ãß°¡
     5984, 5985,                                         // CouchDB
     8086, 8088,                                         // InfluxDB
     7474, 7473, 7687,                                   // Neo4j
     8091, 8092, 8093,                                   // Couchbase
     28015, 29015,                                       // RethinkDB
 
-    // ë©”ì‹œì§€ í/ìŠ¤íŠ¸ë¦¬ë° 
+    // ¸Ş½ÃÁö Å¥/½ºÆ®¸®¹Ö 
     5672, 15672,                                        // RabbitMQ
     9092, 9093,                                         // Kafka
     4222, 6222, 8222,                                   // NATS
     1883, 8883,                                         // MQTT
     6379,                                               // Redis
 
-    // ëª¨ë‹ˆí„°ë§/ë©”íŠ¸ë¦­ 
+    // ¸ğ´ÏÅÍ¸µ/¸ŞÆ®¸¯ 
     3000,                                               // Grafana
     9090, 9091,                                         // Prometheus
     4040,                                               // Spark UI
     8080, 8081,                                         // Jenkins, Tomcat
     8888,                                               // Jupyter Notebook
 
-    // í´ë¼ìš°ë“œ ì„œë¹„ìŠ¤
+    // Å¬¶ó¿ìµå ¼­ºñ½º
     10001, 10002,                                       // Ubiquiti
     8291,                                               // MikroTik
     5555, 5556,                                         // HP Data Protector
     1900,                                               // UPnP (SSDP)
 
-    // VoIP/í†µì‹ 
+    // VoIP/Åë½Å
     5060, 5061,                                         // SIP
     5038,                                               // Asterisk Management
 
-    // ë°±ì—…/íŒŒì¼ ì „ì†¡
+    // ¹é¾÷/ÆÄÀÏ Àü¼Û
     2049,                                               // NFS
     873,                                                // rsync
     69,                                                 // TFTP
-    20, 21,                                             // FTP (ë°ì´í„°, ì œì–´)
+    20, 21,                                             // FTP (µ¥ÀÌÅÍ, Á¦¾î)
 
-    // ì›ê²© ì ‘ì† ì¶”ê°€
+    // ¿ø°İ Á¢¼Ó Ãß°¡
     5900, 5901, 5902,                                   // VNC
     5631, 5632,                                         // pcAnywhere
     10000, 20000,                                       // Webmin, DNP3
 
-    // ì‚°ì—… ì œì–´ ì‹œìŠ¤í…œ (ICS/SCADA)
+    // »ê¾÷ Á¦¾î ½Ã½ºÅÛ (ICS/SCADA)
     502,                                                // Modbus
     102,                                                // S7comm (Siemens)
     44818,                                              // EtherNet/IP
     20000,                                              // DNP3
     47808,                                              // BACnet
 
-    // IoT ë””ë°”ì´ìŠ¤
-    554,                                                // RTSP (IP ì¹´ë©”ë¼)
-    8000, 8080, 8081,                                   // ì›¹ìº , IP ì¹´ë©”ë¼
-    9100,                                               // í”„ë¦°í„° (JetDirect)
-    515,                                                // LPD (í”„ë¦°í„°)
-    631,                                                // IPP (í”„ë¦°í„°)
+    // IoT µğ¹ÙÀÌ½º
+    554,                                                // RTSP (IP Ä«¸Ş¶ó)
+    8000, 8080, 8081,                                   // À¥Ä·, IP Ä«¸Ş¶ó
+    9100,                                               // ÇÁ¸°ÅÍ (JetDirect)
+    515,                                                // LPD (ÇÁ¸°ÅÍ)
+    631,                                                // IPP (ÇÁ¸°ÅÍ)
 
-    // P2P/íŒŒì¼ ê³µìœ 
+    // P2P/ÆÄÀÏ °øÀ¯
     6881, 6882, 6883, 6884, 6885, 6886, 6887, 6888, 6889,   // BitTorrent
     6346,                                               // Gnutella
     4662, 4672,                                         // eMule
 
-    // ê°œë°œ/ë””ë²„ê¹…
+    // °³¹ß/µğ¹ö±ë
     5858,                                               // Java RMI
     9229,                                               // Node.js Inspector
     5005,                                               // Java Debug Wire Protocol
@@ -980,11 +980,11 @@ const std::unordered_set<WORD> g_SuspiciousPortList =
     8983,                                               // Solr Admin
     9200, 9300,                                         // Elasticsearch
 
-    // 2024-2025 ëœì„¬ì›¨ì–´/ë´‡ë„· í¬íŠ¸
-    65000, 65001, 65002,                                // ë™ì  í• ë‹¹ ê³ ìœ„í—˜ í¬íŠ¸
-    49152, 49153, 49154,                                // Dynamic ports (ì•…ìš©)
+    // 2024-2025 ·£¼¶¿ş¾î/º¿³İ Æ÷Æ®
+    65000, 65001, 65002,                                // µ¿Àû ÇÒ´ç °íÀ§Çè Æ÷Æ®
+    49152, 49153, 49154,                                // Dynamic ports (¾Ç¿ë)
 
-    // ê¸°íƒ€ ê³ ìœ„í—˜ ì„œë¹„ìŠ¤
+    // ±âÅ¸ °íÀ§Çè ¼­ºñ½º
     111,                                                // RPC portmapper
     135,                                                // MS RPC
     161, 162,                                           // SNMP
@@ -997,7 +997,7 @@ const std::unordered_set<WORD> g_SuspiciousPortList =
 
 const std::unordered_map<std::tstring, std::tstring> g_BrandList =
 {
-    // ==================== ê¸€ë¡œë²Œ í…Œí¬ ê¸°ì—… ==================== //
+    // ==================== ±Û·Î¹ú Å×Å© ±â¾÷ ==================== //
     // Apple Ecosystem
     { TEXT("apple"), TEXT("apple.com") },
     {TEXT("icloud"), TEXT("icloud.com")},
@@ -1066,7 +1066,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("threads"), TEXT("threads.net") },
     { TEXT("oculus"), TEXT("oculus.com") },
 
-    // ==================== ì†Œì…œ ë¯¸ë””ì–´ ==================== //
+    // ==================== ¼Ò¼È ¹Ìµğ¾î ==================== //
     { TEXT("twitter"), TEXT("twitter.com") },
     { TEXT("x"), TEXT("x.com") },
     { TEXT("linkedin"), TEXT("linkedin.com") },
@@ -1085,7 +1085,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("kakaotalk"), TEXT("kakao.com") },
     { TEXT("band"), TEXT("band.us") },
 
-    // ==================== ê¸€ë¡œë²Œ ê¸ˆìœµ ê¸°ê´€ ==================== //
+    // ==================== ±Û·Î¹ú ±İÀ¶ ±â°ü ==================== //
 
     // Payment Processors
     { TEXT("paypal"), TEXT("paypal.com") },
@@ -1151,15 +1151,15 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("mizuho"), TEXT("mizuhogroup.com") },
     { TEXT("smbc"), TEXT("smbc.co.jp") },
 
-    // ==================== í•œêµ­ ê¸ˆìœµ & í•€í…Œí¬ ==================== //
+    // ==================== ÇÑ±¹ ±İÀ¶ & ÇÉÅ×Å© ==================== //
 
-    // í¬í„¸/í”Œë«í¼
+    // Æ÷ÅĞ/ÇÃ·§Æû
     { TEXT("naver"), TEXT("naver.com") },
     { TEXT("naverpay"), TEXT("naver.com") },
     { TEXT("daum"), TEXT("daum.net") },
     { TEXT("nate"), TEXT("nate.com") },
 
-    // ëª¨ë°”ì¼ ê¸ˆìœµ
+    // ¸ğ¹ÙÀÏ ±İÀ¶
     { TEXT("toss"), TEXT("toss.im") },
     { TEXT("kakaopay"), TEXT("kakaopay.com") },
     { TEXT("kakaobank"), TEXT("kakaobank.com") },
@@ -1172,7 +1172,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("ktmmobile"), TEXT("ktmmobile.com") },
     { TEXT("sk7mobile"), TEXT("sk7mobile.com") },
 
-    // ì€í–‰
+    // ÀºÇà
     { TEXT("kbstar"), TEXT("kbstar.com") },
     { TEXT("kbbank"), TEXT("kbstar.com") },
     { TEXT("shinhan"), TEXT("shinhan.com") },
@@ -1192,7 +1192,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("kbank"), TEXT("kbank.com") },
     { TEXT("tossbank"), TEXT("tossbank.com") },
 
-    // ì¹´ë“œì‚¬
+    // Ä«µå»ç
     { TEXT("shinhancard"), TEXT("shinhancard.com") },
     { TEXT("kbcard"), TEXT("kbcard.com") },
     { TEXT("hanacard"), TEXT("hanacard.co.kr") },
@@ -1204,7 +1204,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("wooricard"), TEXT("wooricard.com") },
     { TEXT("citicard"), TEXT("citicard.co.kr") },
 
-    // ì¦ê¶Œì‚¬
+    // Áõ±Ç»ç
     { TEXT("miraeasset"), TEXT("miraeasset.com") },
     { TEXT("kiwoom"), TEXT("kiwoom.com") },
     { TEXT("nhqv"), TEXT("nhqv.com") },
@@ -1214,7 +1214,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("hanaw"), TEXT("hanaw.com") },
     { TEXT("truefriend"), TEXT("truefriend.com") },
 
-    // ë³´í—˜ì‚¬
+    // º¸Çè»ç
     { TEXT("samsungfire"), TEXT("samsungfire.com") },
     { TEXT("samsunglife"), TEXT("samsunglife.com") },
     { TEXT("meritzfire"), TEXT("meritzfire.com") },
@@ -1224,7 +1224,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("heungkukfire"), TEXT("heungkukfire.co.kr") },
     { TEXT("dongbu"), TEXT("idongbu.com") },
 
-    // ==================== ì•”í˜¸í™”í ==================== //
+    // ==================== ¾ÏÈ£È­Æó ==================== //
     { TEXT("binance"), TEXT("binance.com") },
     { TEXT("coinbase"), TEXT("coinbase.com") },
     { TEXT("kraken"), TEXT("kraken.com") },
@@ -1251,7 +1251,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("gopax"), TEXT("gopax.co.kr") },
     { TEXT("okbit"), TEXT("okbit.co.kr") },
 
-    // ==================== ì´ì»¤ë¨¸ìŠ¤ ==================== //
+    // ==================== ÀÌÄ¿¸Ó½º ==================== //
     { TEXT("ebay"), TEXT("ebay.com") },
     { TEXT("etsy"), TEXT("etsy.com") },
     { TEXT("alibaba"), TEXT("alibaba.com") },
@@ -1276,7 +1276,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("jd"), TEXT("jd.com") },
     { TEXT("pinduoduo"), TEXT("pinduoduo.com") },
 
-    // í•œêµ­ ì´ì»¤ë¨¸ìŠ¤
+    // ÇÑ±¹ ÀÌÄ¿¸Ó½º
     { TEXT("coupang"), TEXT("coupang.com") },
     { TEXT("11st"), TEXT("11st.co.kr") },
     { TEXT("gmarket"), TEXT("gmarket.co.kr") },
@@ -1301,7 +1301,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("ably"), TEXT("a-bly.com") },
     { TEXT("brandi"), TEXT("brandi.co.kr") },
 
-    // ==================== ë°°ë‹¬ ì£¼ë¬¸ ==================== //
+    // ==================== ¹è´Ş ÁÖ¹® ==================== //
     { TEXT("ubereats"), TEXT("ubereats.com") },
     { TEXT("doordash"), TEXT("doordash.com") },
     { TEXT("grubhub"), TEXT("grubhub.com") },
@@ -1311,14 +1311,14 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("swiggy"), TEXT("swiggy.com") },
     { TEXT("foodpanda"), TEXT("foodpanda.com") },
 
-    // í•œêµ­ ë°°ë‹¬ 
+    // ÇÑ±¹ ¹è´Ş 
     { TEXT("baemin"), TEXT("baemin.com") },
     { TEXT("baedal"), TEXT("baemin.com") },
     { TEXT("yogiyo"), TEXT("yogiyo.co.kr") },
     { TEXT("coupangeats"), TEXT("coupangeats.com") },
     { TEXT("ddingdong"), TEXT("ddingdong.com") },
 
-    // ==================== ì—¬í–‰ & ìˆ™ë°• ==================== //
+    // ==================== ¿©Çà & ¼÷¹Ú ==================== //
     { TEXT("booking"), TEXT("booking.com") },
     { TEXT("expedia"), TEXT("expedia.com") },
     { TEXT("airbnb"), TEXT("airbnb.com") },
@@ -1336,7 +1336,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("ihg"), TEXT("ihg.com") },
     { TEXT("accor"), TEXT("accor.com") },
 
-    // í•œêµ­ ì—¬í–‰
+    // ÇÑ±¹ ¿©Çà
     { TEXT("yanolja"), TEXT("yanolja.com") },
     { TEXT("goodchoice"), TEXT("goodchoice.kr") },
     { TEXT("yeogi"), TEXT("yeogi.com") },
@@ -1344,7 +1344,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("modetour"), TEXT("modetour.com") },
     { TEXT("hanatour"), TEXT("hanatour.com") },
 
-    // í•­ê³µì‚¬
+    // Ç×°ø»ç
     { TEXT("delta"), TEXT("delta.com") },
     { TEXT("united"), TEXT("united.com") },
     { TEXT("american"), TEXT("aa.com") },
@@ -1366,7 +1366,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("tway"), TEXT("twayair.com") },
     { TEXT("airbusan"), TEXT("airbusan.com") },
 
-    // ==================== ë°°ì†¡ & ë¬¼ë¥˜ ==================== //
+    // ==================== ¹è¼Û & ¹°·ù ==================== //
     { TEXT("fedex"), TEXT("fedex.com") },
     { TEXT("ups"), TEXT("ups.com") },
     { TEXT("dhl"), TEXT("dhl.com") },
@@ -1376,7 +1376,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("canadapost"), TEXT("canadapost.ca") },
     { TEXT("auspost"), TEXT("auspost.com.au") },
 
-    // í•œêµ­ ë°°ì†¡
+    // ÇÑ±¹ ¹è¼Û
     { TEXT("cjlogistics"), TEXT("cjlogistics.com") },
     { TEXT("epost"), TEXT("epost.go.kr") },
     { TEXT("hanjin"), TEXT("hanjin.co.kr") },
@@ -1384,7 +1384,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("kgbls"), TEXT("kgbls.co.kr") },
     { TEXT("ilogen"), TEXT("ilogen.com") },
 
-    // ==================== ìŠ¤íŠ¸ë¦¬ë° & ì—”í„°í…Œì¸ë¨¼íŠ¸ ==================== //
+    // ==================== ½ºÆ®¸®¹Ö & ¿£ÅÍÅ×ÀÎ¸ÕÆ® ==================== //
     { TEXT("netflix"), TEXT("netflix.com") },
     { TEXT("hulu"), TEXT("hulu.com") },
     { TEXT("disneyplus"), TEXT("disneyplus.com") },
@@ -1398,7 +1398,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("funimation"), TEXT("funimation.com") },
     { TEXT("viki"), TEXT("viki.com") },
 
-    // ìŒì•… ìŠ¤íŠ¸ë¦¬ë°
+    // À½¾Ç ½ºÆ®¸®¹Ö
     { TEXT("spotify"), TEXT("spotify.com") },
     { TEXT("applemusic"), TEXT("apple.com") },
     { TEXT("pandora"), TEXT("pandora.com") },
@@ -1407,7 +1407,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("deezer"), TEXT("deezer.com") },
     { TEXT("youtubemusic"), TEXT("youtube.com") },
 
-    // í•œêµ­ ìŠ¤íŠ¸ë¦¬ë°
+    // ÇÑ±¹ ½ºÆ®¸®¹Ö
     { TEXT("wavve"), TEXT("wavve.com") },
     { TEXT("tving"), TEXT("tving.com") },
     { TEXT("watcha"), TEXT("watcha.com") },
@@ -1419,7 +1419,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("flo"), TEXT("music-flo.com") },
     { TEXT("vibe"), TEXT("vibe.naver.com") },
 
-    // ==================== ê²Œì„ í”Œë«í¼ ==================== //
+    // ==================== °ÔÀÓ ÇÃ·§Æû ==================== //
     { TEXT("steam"), TEXT("steampowered.com") },
     { TEXT("epicgames"), TEXT("epicgames.com") },
     { TEXT("origin"), TEXT("origin.com") },
@@ -1454,9 +1454,9 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("callofduty"), TEXT("callofduty.com") },
     { TEXT("apex"), TEXT("ea.com") },
 
-    // ==================== í†µì‹ ì‚¬ ==================== //
+    // ==================== Åë½Å»ç ==================== //
 
-    // ê¸€ë¡œë²Œ í†µì‹ ì‚¬
+    // ±Û·Î¹ú Åë½Å»ç
     { TEXT("att"), TEXT("att.com") },
     { TEXT("verizon"), TEXT("verizon.com") },
     { TEXT("t-mobile"), TEXT("t-mobile.com") },
@@ -1477,14 +1477,14 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("chinaunicom"), TEXT("chinaunicom.com.cn") },
     { TEXT("chinamobile"), TEXT("chinamobile.com") },
 
-    // í•œêµ­ í†µì‹ ì‚¬
+    // ÇÑ±¹ Åë½Å»ç
     { TEXT("skt"), TEXT("sktelecom.com") },
     { TEXT("skbroadband"), TEXT("skbroadband.com") },
     { TEXT("kt"), TEXT("kt.com") },
     { TEXT("uplus"), TEXT("uplus.co.kr") },
     { TEXT("lguplus"), TEXT("uplus.co.kr") },
 
-    // ==================== í´ë¼ìš°ë“œ & SaaS ==================== //
+    // ==================== Å¬¶ó¿ìµå & SaaS ==================== //
     { TEXT("dropbox"), TEXT("dropbox.com") },
     { TEXT("box"), TEXT("box.com") },
     { TEXT("googledrive"), TEXT("google.com") },
@@ -1494,7 +1494,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("pcloud"), TEXT("pcloud.com") },
     { TEXT("sync"), TEXT("sync.com") },
 
-    // ê°œë°œì ë„êµ¬
+    // °³¹ßÀÚ µµ±¸
     { TEXT("github"), TEXT("github.com") },
     { TEXT("gitlab"), TEXT("gitlab.com") },
     { TEXT("bitbucket"), TEXT("bitbucket.org") },
@@ -1508,7 +1508,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("evernote"), TEXT("evernote.com") },
     { TEXT("onenote"), TEXT("microsoft.com") },
 
-    // ì»¤ë®¤ë‹ˆì¼€ì´ì…˜
+    // Ä¿¹Â´ÏÄÉÀÌ¼Ç
     { TEXT("slack"), TEXT("slack.com") },
     { TEXT("zoom"), TEXT("zoom.us") },
     { TEXT("webex"), TEXT("webex.com") },
@@ -1516,14 +1516,14 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("meet"), TEXT("meet.google.com") },
     { TEXT("teams"), TEXT("microsoft.com") },
 
-    // ë””ìì¸
+    // µğÀÚÀÎ
     { TEXT("adobe"), TEXT("adobe.com") },
     { TEXT("figma"), TEXT("figma.com") },
     { TEXT("canva"), TEXT("canva.com") },
     { TEXT("sketch"), TEXT("sketch.com") },
     { TEXT("invision"), TEXT("invisionapp.com") },
 
-    // ë„ë©”ì¸/í˜¸ìŠ¤íŒ…
+    // µµ¸ŞÀÎ/È£½ºÆÃ
     { TEXT("godaddy"), TEXT("godaddy.com") },
     { TEXT("namecheap"), TEXT("namecheap.com") },
     { TEXT("bluehost"), TEXT("bluehost.com") },
@@ -1535,7 +1535,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("weebly"), TEXT("weebly.com") },
     { TEXT("wordpress"), TEXT("wordpress.com") },
 
-    // í´ë¼ìš°ë“œ ì¸í”„ë¼
+    // Å¬¶ó¿ìµå ÀÎÇÁ¶ó
     { TEXT("cloudflare"), TEXT("cloudflare.com") },
     { TEXT("digitalocean"), TEXT("digitalocean.com") },
     { TEXT("linode"), TEXT("linode.com") },
@@ -1544,7 +1544,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("netlify"), TEXT("netlify.com") },
     { TEXT("vercel"), TEXT("vercel.com") },
 
-    // IAM/SSO/ì¸ì¦ í”Œë«í¼
+    // IAM/SSO/ÀÎÁõ ÇÃ·§Æû
     { TEXT("okta"), TEXT("okta.com") },
     { TEXT("auth0"), TEXT("auth0.com") },
     { TEXT("onelogin"), TEXT("onelogin.com") },
@@ -1575,7 +1575,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("logmeonce"), TEXT("logmeonce.com") },
     { TEXT("zoho"), TEXT("zoho.com") },
 
-    // ì—”í„°í”„ë¼ì´ì¦ˆ SaaS
+    // ¿£ÅÍÇÁ¶óÀÌÁî SaaS
     { TEXT("salesforce"), TEXT("salesforce.com") },
     { TEXT("docusign"), TEXT("docusign.com") },
     { TEXT("adobesign"), TEXT("adobesign.com") },
@@ -1591,7 +1591,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("peoplesoft"), TEXT("oracle.com") },
     { TEXT("dynamics"), TEXT("dynamics.microsoft.com") },
 
-    // CRM/ë§ˆì¼€íŒ…
+    // CRM/¸¶ÄÉÆÃ
     { TEXT("hubspot"), TEXT("hubspot.com") },
     { TEXT("marketo"), TEXT("marketo.com") },
     { TEXT("mailchimp"), TEXT("mailchimp.com") },
@@ -1604,7 +1604,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("intercom"), TEXT("intercom.com") },
     { TEXT("drift"), TEXT("drift.com") },
 
-    // íšŒê³„/ì¬ë¬´
+    // È¸°è/Àç¹«
     { TEXT("quickbooks"), TEXT("quickbooks.intuit.com") },
     { TEXT("intuit"), TEXT("intuit.com") },
     { TEXT("xero"), TEXT("xero.com") },
@@ -1616,7 +1616,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("billcom"), TEXT("bill.com") },
     { TEXT("coupa"), TEXT("coupa.com") },
 
-    // HR/ê¸‰ì—¬
+    // HR/±Ş¿©
     { TEXT("adp"), TEXT("adp.com") },
     { TEXT("paychex"), TEXT("paychex.com") },
     { TEXT("gusto"), TEXT("gusto.com") },
@@ -1626,7 +1626,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("rippling"), TEXT("rippling.com") },
     { TEXT("justworks"), TEXT("justworks.com") },
 
-    // ë¶„ì„/BI
+    // ºĞ¼®/BI
     { TEXT("tableau"), TEXT("tableau.com") },
     { TEXT("powerbi"), TEXT("powerbi.microsoft.com") },
     { TEXT("looker"), TEXT("looker.com") },
@@ -1634,9 +1634,9 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("qlik"), TEXT("qlik.com") },
     { TEXT("sisense"), TEXT("sisense.com") },
 
-    // ==================== êµìœ¡ í”Œë«í¼ & ê¸°ê´€ ==================== //
+    // ==================== ±³À° ÇÃ·§Æû & ±â°ü ==================== //
 
-    // ì˜¨ë¼ì¸ êµìœ¡ í”Œë«í¼
+    // ¿Â¶óÀÎ ±³À° ÇÃ·§Æû
     { TEXT("coursera"), TEXT("coursera.org") },
     { TEXT("udemy"), TEXT("udemy.com") },
     { TEXT("edx"), TEXT("edx.org") },
@@ -1650,7 +1650,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("rosettastone"), TEXT("rosettastone.com") },
     { TEXT("babbel"), TEXT("babbel.com") },
 
-    // í•™ìŠµê´€ë¦¬ì‹œìŠ¤í…œ (LMS)
+    // ÇĞ½À°ü¸®½Ã½ºÅÛ (LMS)
     { TEXT("canvas"), TEXT("canvas.instructure.com") },
     { TEXT("instructure"), TEXT("instructure.com") },
     { TEXT("blackboard"), TEXT("blackboard.com") },
@@ -1665,7 +1665,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("infinite"), TEXT("infinitecampus.com") },
     { TEXT("skyward"), TEXT("skyward.com") },
 
-    // ê¸€ë¡œë²Œ ëŒ€í•™ (ë¯¸êµ­)
+    // ±Û·Î¹ú ´ëÇĞ (¹Ì±¹)
     { TEXT("harvard"), TEXT("harvard.edu") },
     { TEXT("mit"), TEXT("mit.edu") },
     { TEXT("stanford"), TEXT("stanford.edu") },
@@ -1685,7 +1685,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("nyu"), TEXT("nyu.edu") },
     { TEXT("northwestern"), TEXT("northwestern.edu") },
 
-    // ê¸€ë¡œë²Œ ëŒ€í•™ (ì˜êµ­)
+    // ±Û·Î¹ú ´ëÇĞ (¿µ±¹)
     { TEXT("oxford"), TEXT("ox.ac.uk") },
     { TEXT("cambridge"), TEXT("cam.ac.uk") },
     { TEXT("imperial"), TEXT("imperial.ac.uk") },
@@ -1695,7 +1695,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("kcl"), TEXT("kcl.ac.uk") },
     { TEXT("manchester"), TEXT("manchester.ac.uk") },
 
-    // ê¸€ë¡œë²Œ ëŒ€í•™ (ê¸°íƒ€)
+    // ±Û·Î¹ú ´ëÇĞ (±âÅ¸)
     { TEXT("utoronto"), TEXT("utoronto.ca") },
     { TEXT("ubc"), TEXT("ubc.ca") },
     { TEXT("mcgill"), TEXT("mcgill.ca") },
@@ -1709,35 +1709,35 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("todai"), TEXT("u-tokyo.ac.jp") },
     { TEXT("kyoto-u"), TEXT("kyoto-u.ac.jp") },
 
-    // í•œêµ­ ì£¼ìš” ëŒ€í•™
+    // ÇÑ±¹ ÁÖ¿ä ´ëÇĞ
     { TEXT("snu"), TEXT("snu.ac.kr") },
-    { TEXT("ì„œìš¸ëŒ€"), TEXT("snu.ac.kr") },
+    { TEXT("¼­¿ï´ë"), TEXT("snu.ac.kr") },
     { TEXT("yonsei"), TEXT("yonsei.ac.kr") },
-    { TEXT("ì—°ì„¸ëŒ€"), TEXT("yonsei.ac.kr") },
+    { TEXT("¿¬¼¼´ë"), TEXT("yonsei.ac.kr") },
     { TEXT("korea"), TEXT("korea.ac.kr") },
-    { TEXT("ê³ ë ¤ëŒ€"), TEXT("korea.ac.kr") },
+    { TEXT("°í·Á´ë"), TEXT("korea.ac.kr") },
     { TEXT("kaist"), TEXT("kaist.ac.kr") },
-    { TEXT("í¬í•­ê³µëŒ€"), TEXT("postech.ac.kr") },
+    { TEXT("Æ÷Ç×°ø´ë"), TEXT("postech.ac.kr") },
     { TEXT("postech"), TEXT("postech.ac.kr") },
     { TEXT("unist"), TEXT("unist.ac.kr") },
     { TEXT("dgist"), TEXT("dgist.ac.kr") },
     { TEXT("gist"), TEXT("gist.ac.kr") },
     { TEXT("skku"), TEXT("skku.edu") },
-    { TEXT("ì„±ê· ê´€ëŒ€"), TEXT("skku.edu") },
+    { TEXT("¼º±Õ°ü´ë"), TEXT("skku.edu") },
     { TEXT("hanyang"), TEXT("hanyang.ac.kr") },
-    { TEXT("í•œì–‘ëŒ€"), TEXT("hanyang.ac.kr") },
+    { TEXT("ÇÑ¾ç´ë"), TEXT("hanyang.ac.kr") },
     { TEXT("sogang"), TEXT("sogang.ac.kr") },
-    { TEXT("ì„œê°•ëŒ€"), TEXT("sogang.ac.kr") },
+    { TEXT("¼­°­´ë"), TEXT("sogang.ac.kr") },
     { TEXT("cau"), TEXT("cau.ac.kr") },
-    { TEXT("ì¤‘ì•™ëŒ€"), TEXT("cau.ac.kr") },
+    { TEXT("Áß¾Ó´ë"), TEXT("cau.ac.kr") },
     { TEXT("ewha"), TEXT("ewha.ac.kr") },
-    { TEXT("ì´í™”ì—¬ëŒ€"), TEXT("ewha.ac.kr") },
+    { TEXT("ÀÌÈ­¿©´ë"), TEXT("ewha.ac.kr") },
     { TEXT("kyunghee"), TEXT("khu.ac.kr") },
-    { TEXT("ê²½í¬ëŒ€"), TEXT("khu.ac.kr") },
+    { TEXT("°æÈñ´ë"), TEXT("khu.ac.kr") },
     { TEXT("sungshin"), TEXT("sungshin.ac.kr") },
-    { TEXT("ìˆ™ëª…ì—¬ëŒ€"), TEXT("sookmyung.ac.kr") },
+    { TEXT("¼÷¸í¿©´ë"), TEXT("sookmyung.ac.kr") },
 
-    // ==================== ë³´ì•ˆ & ë°±ì‹  ==================== //
+    // ==================== º¸¾È & ¹é½Å ==================== //
     { TEXT("norton"), TEXT("norton.com") },
     { TEXT("mcafee"), TEXT("mcafee.com") },
     { TEXT("kaspersky"), TEXT("kaspersky.com") },
@@ -1752,7 +1752,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("ahnlab"), TEXT("ahnlab.com") },
     { TEXT("v3"), TEXT("ahnlab.com") },
 
-    // ==================== ë‰´ìŠ¤ & ë¯¸ë””ì–´ ==================== //
+    // ==================== ´º½º & ¹Ìµğ¾î ==================== //
     { TEXT("nytimes"), TEXT("nytimes.com") },
     { TEXT("washingtonpost"), TEXT("washingtonpost.com") },
     { TEXT("wsj"), TEXT("wsj.com") },
@@ -1763,7 +1763,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("forbes"), TEXT("forbes.com") },
     { TEXT("theguardian"), TEXT("theguardian.com") },
 
-    // í•œêµ­ ë‰´ìŠ¤
+    // ÇÑ±¹ ´º½º
     { TEXT("chosun"), TEXT("chosun.com") },
     { TEXT("joongang"), TEXT("joongang.co.kr") },
     { TEXT("donga"), TEXT("donga.com") },
@@ -1773,9 +1773,9 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("hani"), TEXT("hani.co.kr") },
     { TEXT("ohmynews"), TEXT("ohmynews.com") },
 
-    // ==================== ì •ë¶€ & ê³µê³µê¸°ê´€ ==================== //
+    // ==================== Á¤ºÎ & °ø°ø±â°ü ==================== //
 
-    // ë¯¸êµ­ 
+    // ¹Ì±¹ 
     { TEXT("irs"), TEXT("irs.gov") },
     { TEXT("ssa"), TEXT("ssa.gov") },
     { TEXT("socialsecurity"), TEXT("ssa.gov") },
@@ -1798,28 +1798,28 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("medicare"), TEXT("medicare.gov") },
     { TEXT("medicaid"), TEXT("medicaid.gov") },
 
-    // ì˜êµ­
+    // ¿µ±¹
     { TEXT("gov.uk"), TEXT("gov.uk") },
     { TEXT("hmrc"), TEXT("gov.uk") },
     { TEXT("dvla"), TEXT("gov.uk") },
     { TEXT("nhs"), TEXT("nhs.uk") },
     { TEXT("homeoffice"), TEXT("gov.uk") },
 
-    // ìºë‚˜ë‹¤
+    // Ä³³ª´Ù
     { TEXT("canada.ca"), TEXT("canada.ca") },
     { TEXT("cra"), TEXT("canada.ca") },
     { TEXT("servicecanada"), TEXT("canada.ca") },
     { TEXT("cic"), TEXT("canada.ca") },
     { TEXT("ircc"), TEXT("canada.ca") },
 
-    // í˜¸ì£¼
+    // È£ÁÖ
     { TEXT("ato"), TEXT("ato.gov.au") },
     { TEXT("australia.gov"), TEXT("australia.gov.au") },
     { TEXT("mygov"), TEXT("my.gov.au") },
     { TEXT("centrelink"), TEXT("servicesaustralia.gov.au") },
     { TEXT("homeaffairs"), TEXT("homeaffairs.gov.au") },
 
-    // ìœ ëŸ½
+    // À¯·´
     { TEXT("gouv.fr"), TEXT("gouv.fr") },
     { TEXT("impots.gouv"), TEXT("impots.gouv.fr") },
     { TEXT("finanzamt"), TEXT("finanzamt.de") },
@@ -1827,113 +1827,113 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("belastingdienst"), TEXT("belastingdienst.nl") },
     { TEXT("skatteverket"), TEXT("skatteverket.se") },
 
-    // ì•„ì‹œì•„
+    // ¾Æ½Ã¾Æ
     { TEXT("moj"), TEXT("moj.go.jp") },
     { TEXT("nta"), TEXT("nta.go.jp") },
     { TEXT("ird"), TEXT("ird.gov.hk") },
     { TEXT("iras"), TEXT("iras.gov.sg") },
     { TEXT("singpass"), TEXT("singpass.gov.sg") },
 
-    // í•œêµ­ ì„¸ë¬´/ì¬ì •
+    // ÇÑ±¹ ¼¼¹«/ÀçÁ¤
     { TEXT("hometax"), TEXT("hometax.go.kr") },
     { TEXT("wetax"), TEXT("wetax.go.kr") },
     { TEXT("etax"), TEXT("etax.go.kr") },
     { TEXT("nts"), TEXT("nts.go.kr") },
-    { TEXT("êµ­ì„¸ì²­"), TEXT("nts.go.kr") },
+    { TEXT("±¹¼¼Ã»"), TEXT("nts.go.kr") },
     { TEXT("customs"), TEXT("customs.go.kr") },
-    { TEXT("ê´€ì„¸ì²­"), TEXT("customs.go.kr") },
+    { TEXT("°ü¼¼Ã»"), TEXT("customs.go.kr") },
     { TEXT("mof"), TEXT("moef.go.kr") },
-    { TEXT("ê¸°íšì¬ì •ë¶€"), TEXT("moef.go.kr") },
+    { TEXT("±âÈ¹ÀçÁ¤ºÎ"), TEXT("moef.go.kr") },
 
-    // í•œêµ­ ì‚¬ë²•/ì¹˜ì•ˆ
+    // ÇÑ±¹ »ç¹ı/Ä¡¾È
     { TEXT("scourt"), TEXT("scourt.go.kr") },
-    { TEXT("ëŒ€ë²•ì›"), TEXT("scourt.go.kr") },
+    { TEXT("´ë¹ı¿ø"), TEXT("scourt.go.kr") },
     { TEXT("court"), TEXT("court.go.kr") },
-    { TEXT("ë²•ì›"), TEXT("court.go.kr") },
+    { TEXT("¹ı¿ø"), TEXT("court.go.kr") },
     { TEXT("spo"), TEXT("spo.go.kr") },
-    { TEXT("ê²€ì°°ì²­"), TEXT("spo.go.kr") },
+    { TEXT("°ËÂûÃ»"), TEXT("spo.go.kr") },
     { TEXT("police"), TEXT("police.go.kr") },
-    { TEXT("ê²½ì°°ì²­"), TEXT("police.go.kr") },
+    { TEXT("°æÂûÃ»"), TEXT("police.go.kr") },
     { TEXT("cyberbureau"), TEXT("police.go.kr") },
     { TEXT("moj"), TEXT("moj.go.kr") },
-    { TEXT("ë²•ë¬´ë¶€"), TEXT("moj.go.kr") },
+    { TEXT("¹ı¹«ºÎ"), TEXT("moj.go.kr") },
     { TEXT("ccourt"), TEXT("ccourt.go.kr") },
-    { TEXT("í—Œë²•ì¬íŒì†Œ"), TEXT("ccourt.go.kr") },
+    { TEXT("Çå¹ıÀçÆÇ¼Ò"), TEXT("ccourt.go.kr") },
 
-    // í•œêµ­ í–‰ì •/ë¯¼ì›
+    // ÇÑ±¹ ÇàÁ¤/¹Î¿ø
     { TEXT("mois"), TEXT("mois.go.kr") },
-    { TEXT("í–‰ì •ì•ˆì „ë¶€"), TEXT("mois.go.kr") },
+    { TEXT("ÇàÁ¤¾ÈÀüºÎ"), TEXT("mois.go.kr") },
     { TEXT("minwon"), TEXT("minwon.go.kr") },
-    { TEXT("ë¯¼ì›24"), TEXT("minwon.go.kr") },
+    { TEXT("¹Î¿ø24"), TEXT("minwon.go.kr") },
     { TEXT("gov"), TEXT("gov.kr") },
-    { TEXT("ì •ë¶€24"), TEXT("gov.kr") },
+    { TEXT("Á¤ºÎ24"), TEXT("gov.kr") },
     { TEXT("g4b"), TEXT("g4b.go.kr") },
     { TEXT("epeople"), TEXT("epeople.go.kr") },
     { TEXT("mofa"), TEXT("mofa.go.kr") },
-    { TEXT("ì™¸êµë¶€"), TEXT("mofa.go.kr") },
+    { TEXT("¿Ü±³ºÎ"), TEXT("mofa.go.kr") },
     { TEXT("mnd"), TEXT("mnd.go.kr") },
-    { TEXT("êµ­ë°©ë¶€"), TEXT("mnd.go.kr") },
+    { TEXT("±¹¹æºÎ"), TEXT("mnd.go.kr") },
     { TEXT("mma"), TEXT("mma.go.kr") },
-    { TEXT("ë³‘ë¬´ì²­"), TEXT("mma.go.kr") },
+    { TEXT("º´¹«Ã»"), TEXT("mma.go.kr") },
 
-    // í•œêµ­ ë³µì§€/ê³ ìš©
+    // ÇÑ±¹ º¹Áö/°í¿ë
     { TEXT("nps"), TEXT("nps.or.kr") },
-    { TEXT("êµ­ë¯¼ì—°ê¸ˆ"), TEXT("nps.or.kr") },
+    { TEXT("±¹¹Î¿¬±İ"), TEXT("nps.or.kr") },
     { TEXT("nhis"), TEXT("nhis.or.kr") },
-    { TEXT("ê±´ê°•ë³´í—˜"), TEXT("nhis.or.kr") },
+    { TEXT("°Ç°­º¸Çè"), TEXT("nhis.or.kr") },
     { TEXT("kcomwel"), TEXT("kcomwel.or.kr") },
-    { TEXT("ê·¼ë¡œë³µì§€ê³µë‹¨"), TEXT("kcomwel.or.kr") },
+    { TEXT("±Ù·Îº¹Áö°ø´Ü"), TEXT("kcomwel.or.kr") },
     { TEXT("moel"), TEXT("moel.go.kr") },
-    { TEXT("ê³ ìš©ë…¸ë™ë¶€"), TEXT("moel.go.kr") },
+    { TEXT("°í¿ë³ëµ¿ºÎ"), TEXT("moel.go.kr") },
     { TEXT("work"), TEXT("work.go.kr") },
-    { TEXT("ì›Œí¬ë„·"), TEXT("work.go.kr") },
+    { TEXT("¿öÅ©³İ"), TEXT("work.go.kr") },
     { TEXT("ei"), TEXT("ei.go.kr") },
-    { TEXT("ê³ ìš©ë³´í—˜"), TEXT("ei.go.kr") },
+    { TEXT("°í¿ëº¸Çè"), TEXT("ei.go.kr") },
 
-    // í•œêµ­ ìš°í¸/êµí†µ
+    // ÇÑ±¹ ¿ìÆí/±³Åë
     { TEXT("epost"), TEXT("epost.go.kr") },
-    { TEXT("ìš°ì²´êµ­"), TEXT("epost.go.kr") },
+    { TEXT("¿ìÃ¼±¹"), TEXT("epost.go.kr") },
     { TEXT("koreapost"), TEXT("koreapost.go.kr") },
-    { TEXT("ìš°ì •ì‚¬ì—…ë³¸ë¶€"), TEXT("koreapost.go.kr") },
+    { TEXT("¿ìÁ¤»ç¾÷º»ºÎ"), TEXT("koreapost.go.kr") },
     { TEXT("ex"), TEXT("ex.co.kr") },
-    { TEXT("í•œêµ­ë„ë¡œê³µì‚¬"), TEXT("ex.co.kr") },
+    { TEXT("ÇÑ±¹µµ·Î°ø»ç"), TEXT("ex.co.kr") },
     { TEXT("etland"), TEXT("etland.co.kr") },
     { TEXT("highpass"), TEXT("ex.co.kr") },
     { TEXT("molit"), TEXT("molit.go.kr") },
-    { TEXT("êµ­í† êµí†µë¶€"), TEXT("molit.go.kr") },
+    { TEXT("±¹Åä±³ÅëºÎ"), TEXT("molit.go.kr") },
     { TEXT("ts2020"), TEXT("ts2020.kr") },
     { TEXT("kotsa"), TEXT("kotsa.or.kr") },
     { TEXT("safedriving"), TEXT("safedriving.or.kr") },
 
-    // í•œêµ­ ì„ ê±°/êµìœ¡
+    // ÇÑ±¹ ¼±°Å/±³À°
     { TEXT("nec"), TEXT("nec.go.kr") },
-    { TEXT("ì„ ê´€ìœ„"), TEXT("nec.go.kr") },
+    { TEXT("¼±°üÀ§"), TEXT("nec.go.kr") },
     { TEXT("moe"), TEXT("moe.go.kr") },
-    { TEXT("êµìœ¡ë¶€"), TEXT("moe.go.kr") },
+    { TEXT("±³À°ºÎ"), TEXT("moe.go.kr") },
     { TEXT("neis"), TEXT("neis.go.kr") },
-    { TEXT("ë‚˜ì´ìŠ¤"), TEXT("neis.go.kr") },
+    { TEXT("³ªÀÌ½º"), TEXT("neis.go.kr") },
 
-    // í•œêµ­ ê¸ˆìœµ/ê·œì œ
+    // ÇÑ±¹ ±İÀ¶/±ÔÁ¦
     { TEXT("fsc"), TEXT("fsc.go.kr") },
-    { TEXT("ê¸ˆìœµìœ„ì›íšŒ"), TEXT("fsc.go.kr") },
+    { TEXT("±İÀ¶À§¿øÈ¸"), TEXT("fsc.go.kr") },
     { TEXT("fss"), TEXT("fss.or.kr") },
-    { TEXT("ê¸ˆìœµê°ë…ì›"), TEXT("fss.or.kr") },
+    { TEXT("±İÀ¶°¨µ¶¿ø"), TEXT("fss.or.kr") },
     { TEXT("kftc"), TEXT("ftc.go.kr") },
-    { TEXT("ê³µì •ê±°ë˜ìœ„ì›íšŒ"), TEXT("ftc.go.kr") },
+    { TEXT("°øÁ¤°Å·¡À§¿øÈ¸"), TEXT("ftc.go.kr") },
     { TEXT("kcc"), TEXT("kcc.go.kr") },
-    { TEXT("ë°©ì†¡í†µì‹ ìœ„ì›íšŒ"), TEXT("kcc.go.kr") },
+    { TEXT("¹æ¼ÛÅë½ÅÀ§¿øÈ¸"), TEXT("kcc.go.kr") },
 
-    // í•œêµ­ ê¸°íƒ€ ê³µê³µê¸°ê´€
+    // ÇÑ±¹ ±âÅ¸ °ø°ø±â°ü
     { TEXT("kua"), TEXT("kua.go.kr") },
-    { TEXT("í•œêµ­ì „ë ¥"), TEXT("kepco.co.kr") },
+    { TEXT("ÇÑ±¹Àü·Â"), TEXT("kepco.co.kr") },
     { TEXT("kwater"), TEXT("kwater.or.kr") },
-    { TEXT("ìˆ˜ìì›ê³µì‚¬"), TEXT("kwater.or.kr") },
+    { TEXT("¼öÀÚ¿ø°ø»ç"), TEXT("kwater.or.kr") },
     { TEXT("lh"), TEXT("lh.or.kr") },
-    { TEXT("í•œêµ­í† ì§€ì£¼íƒê³µì‚¬"), TEXT("lh.or.kr") },
+    { TEXT("ÇÑ±¹ÅäÁöÁÖÅÃ°ø»ç"), TEXT("lh.or.kr") },
 
-    // ==================== êµ­ì œê¸°êµ¬ (International Organizations) ==================== //
+    // ==================== ±¹Á¦±â±¸ (International Organizations) ==================== //
 
-    // UN ë° ì‚°í•˜ê¸°êµ¬
+    // UN ¹× »êÇÏ±â±¸
     { TEXT("un"), TEXT("un.org") },
     { TEXT("unitednations"), TEXT("un.org") },
     { TEXT("who"), TEXT("who.int") },
@@ -1950,7 +1950,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("wmo"), TEXT("wmo.int") },
     { TEXT("unwto"), TEXT("unwto.org") },
 
-    // êµ­ì œ ê²½ì œ/ê¸ˆìœµ ê¸°êµ¬
+    // ±¹Á¦ °æÁ¦/±İÀ¶ ±â±¸
     { TEXT("worldbank"), TEXT("worldbank.org") },
     { TEXT("imf"), TEXT("imf.org") },
     { TEXT("wto"), TEXT("wto.org") },
@@ -1961,26 +1961,26 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("iadb"), TEXT("iadb.org") },
     { TEXT("afdb"), TEXT("afdb.org") },
 
-    // êµ­ì œ ë²•ë¥ /ì¹˜ì•ˆ ê¸°êµ¬
+    // ±¹Á¦ ¹ı·ü/Ä¡¾È ±â±¸
     { TEXT("interpol"), TEXT("interpol.int") },
     { TEXT("icj"), TEXT("icj-cij.org") },
     { TEXT("icc-cpi"), TEXT("icc-cpi.int") },
     { TEXT("opcw"), TEXT("opcw.org") },
 
-    // êµ­ì œ í‘œì¤€/ê·œì œ ê¸°êµ¬
+    // ±¹Á¦ Ç¥ÁØ/±ÔÁ¦ ±â±¸
     { TEXT("iso"), TEXT("iso.org") },
     { TEXT("iec"), TEXT("iec.ch") },
     { TEXT("itu"), TEXT("itu.int") },
     { TEXT("icann"), TEXT("icann.org") },
     { TEXT("wipo"), TEXT("wipo.int") },
 
-    // êµ­ì œ ë³´ê±´/ì¸ë„ì£¼ì˜
+    // ±¹Á¦ º¸°Ç/ÀÎµµÁÖÀÇ
     { TEXT("redcross"), TEXT("icrc.org") },
     { TEXT("ifrc"), TEXT("ifrc.org") },
     { TEXT("msf"), TEXT("msf.org") },
     { TEXT("doctorswithoutborders"), TEXT("msf.org") },
 
-    // ì§€ì—­ í˜‘ë ¥ì²´
+    // Áö¿ª Çù·ÂÃ¼
     { TEXT("eu"), TEXT("europa.eu") },
     { TEXT("europarl"), TEXT("europarl.europa.eu") },
     { TEXT("europol"), TEXT("europol.europa.eu") },
@@ -1990,7 +1990,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("africanunion"), TEXT("au.int") },
     { TEXT("arab"), TEXT("arableagueonline.org") },
 
-    // ==================== í—¬ìŠ¤ì¼€ì–´ ==================== //
+    // ==================== Çï½ºÄÉ¾î ==================== //
     { TEXT("cvs"), TEXT("cvs.com") },
     { TEXT("walgreens"), TEXT("walgreens.com") },
     { TEXT("riteaid"), TEXT("riteaid.com") },
@@ -2003,7 +2003,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("mayoclinic"), TEXT("mayoclinic.org") },
     { TEXT("webmd"), TEXT("webmd.com") },
 
-    // ==================== ìë™ì°¨ ==================== //
+    // ==================== ÀÚµ¿Â÷ ==================== //
     { TEXT("tesla"), TEXT("tesla.com") },
     { TEXT("ford"), TEXT("ford.com") },
     { TEXT("gm"), TEXT("gm.com") },
@@ -2018,7 +2018,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("kia"), TEXT("kia.com") },
     { TEXT("genesis"), TEXT("genesis.com") },
 
-    // ==================== ê³µìœ  ê²½ì œ ==================== //
+    // ==================== °øÀ¯ °æÁ¦ ==================== //
     { TEXT("uber"), TEXT("uber.com") },
     { TEXT("lyft"), TEXT("lyft.com") },
     { TEXT("grab"), TEXT("grab.com") },
@@ -2029,21 +2029,21 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("socar"), TEXT("socar.kr") },
     { TEXT("greencar"), TEXT("greencar.co.kr") },
 
-    // ==================== ë¶€ë™ì‚° ==================== //
+    // ==================== ºÎµ¿»ê ==================== //
     { TEXT("zillow"), TEXT("zillow.com") },
     { TEXT("redfin"), TEXT("redfin.com") },
     { TEXT("realtor"), TEXT("realtor.com") },
     { TEXT("trulia"), TEXT("trulia.com") },
     { TEXT("apartmentsdotcom"), TEXT("apartments.com") },
 
-    // í•œêµ­ ë¶€ë™ì‚°
+    // ÇÑ±¹ ºÎµ¿»ê
     { TEXT("zigbang"), TEXT("zigbang.com") },
     { TEXT("dabang"), TEXT("dabang.com") },
     { TEXT("naver"), TEXT("land.naver.com") },
     { TEXT("r114"), TEXT("r114.com") },
     { TEXT("peterpan"), TEXT("peterpanz.com") },
 
-    // ==================== ê¸°íƒ€ ì£¼ìš” ì„œë¹„ìŠ¤ ==================== //
+    // ==================== ±âÅ¸ ÁÖ¿ä ¼­ºñ½º ==================== //
     { TEXT("indeed"), TEXT("indeed.com") },
     { TEXT("glassdoor"), TEXT("glassdoor.com") },
     { TEXT("monster"), TEXT("monster.com") },
@@ -2052,13 +2052,13 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("jobkorea"), TEXT("jobkorea.co.kr") },
     { TEXT("wanted"), TEXT("wanted.co.kr") },
 
-    //  ë¦¬ì›Œë“œ/í¬ì¸íŠ¸
+    //  ¸®¿öµå/Æ÷ÀÎÆ®
     { TEXT("happypoint"), TEXT("happypoint.co.kr") },
     { TEXT("okCashbag"), TEXT("okcashbag.com") },
     { TEXT("lpoint"), TEXT("lpoint.com") },
     { TEXT("shinsegaepoint"), TEXT("shinsegaepoint.com") },
 
-    // ê¸°íƒ€
+    // ±âÅ¸
     { TEXT("yelp"), TEXT("yelp.com") },
     { TEXT("tripadvisor"), TEXT("tripadvisor.com") },
     { TEXT("opentable"), TEXT("opentable.com") },
@@ -2070,9 +2070,9 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("aladin"), TEXT("aladin.co.kr") },
     { TEXT("kyobobook"), TEXT("kyobobook.co.kr") },
 
-    // ==================== ë²•ë¥  & ì‚¬ë²• ì„œë¹„ìŠ¤ ==================== //
+    // ==================== ¹ı·ü & »ç¹ı ¼­ºñ½º ==================== //
 
-    // ë²•ë¥  ì„œë¹„ìŠ¤
+    // ¹ı·ü ¼­ºñ½º
     { TEXT("legalzoom"), TEXT("legalzoom.com") },
     { TEXT("rocketlawyer"), TEXT("rocketlawyer.com") },
     { TEXT("avvo"), TEXT("avvo.com") },
@@ -2082,26 +2082,26 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("martindale"), TEXT("martindale.com") },
     { TEXT("lawyers"), TEXT("lawyers.com") },
 
-    // ê³µì¦/ì¸ì¦
+    // °øÁõ/ÀÎÁõ
     { TEXT("notarize"), TEXT("notarize.com") },
     { TEXT("notarycam"), TEXT("notarycam.com") },
     { TEXT("proof"), TEXT("proof.com") },
     { TEXT("apostille"), TEXT("state.gov") },
 
-    // ë²•ì› ì‹œìŠ¤í…œ
+    // ¹ı¿ø ½Ã½ºÅÛ
     { TEXT("pacer"), TEXT("pacer.gov") },
     { TEXT("uscourts"), TEXT("uscourts.gov") },
     { TEXT("supremecourt"), TEXT("supremecourt.gov") },
 
-    // í•œêµ­ ë²•ë¥ 
+    // ÇÑ±¹ ¹ı·ü
     { TEXT("lawfirm"), TEXT("lawfirm.co.kr") },
     { TEXT("lawissue"), TEXT("lawissue.co.kr") },
     { TEXT("lawtimes"), TEXT("lawtimes.co.kr") },
     { TEXT("koreanlii"), TEXT("law.go.kr") },
 
-    // ==================== IT ì§€ì› & í…Œí¬ ì„œë¹„ìŠ¤ ==================== //
+    // ==================== IT Áö¿ø & Å×Å© ¼­ºñ½º ==================== //
 
-    // IT ì§€ì› ì‚¬ì¹­ (Tech Support Scam íŒ¨í„´)
+    // IT Áö¿ø »çÄª (Tech Support Scam ÆĞÅÏ)
     { TEXT("support-microsoft"), TEXT("microsoft.com") },
     { TEXT("microsoft-support"), TEXT("microsoft.com") },
     { TEXT("windows-support"), TEXT("microsoft.com") },
@@ -2119,7 +2119,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("asus-support"), TEXT("asus.com") },
     { TEXT("acer-support"), TEXT("acer.com") },
 
-    // í†µì‹ ì‚¬ ì§€ì›
+    // Åë½Å»ç Áö¿ø
     { TEXT("verizon-support"), TEXT("verizon.com") },
     { TEXT("att-support"), TEXT("att.com") },
     { TEXT("tmobile-support"), TEXT("t-mobile.com") },
@@ -2128,16 +2128,16 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("spectrum-support"), TEXT("spectrum.com") },
     { TEXT("cox-support"), TEXT("cox.com") },
 
-    // í•œêµ­ IT ì§€ì›
+    // ÇÑ±¹ IT Áö¿ø
     { TEXT("lg-support"), TEXT("lge.co.kr") },
-    { TEXT("lgì „ì"), TEXT("lge.co.kr") },
+    { TEXT("lgÀüÀÚ"), TEXT("lge.co.kr") },
     { TEXT("samsung-service"), TEXT("samsung.com") },
-    { TEXT("ì‚¼ì„±ì „ì"), TEXT("samsung.com") },
+    { TEXT("»ï¼ºÀüÀÚ"), TEXT("samsung.com") },
     { TEXT("kt-support"), TEXT("kt.com") },
     { TEXT("skt-support"), TEXT("sktelecom.com") },
     { TEXT("uplus-support"), TEXT("uplus.co.kr") },
 
-    // ====================  AI ì„œë¹„ìŠ¤ ==================== //
+    // ====================  AI ¼­ºñ½º ==================== //
 
     // OpenAI Ecosystem
     { TEXT("openai"), TEXT("openai.com") },
@@ -2159,7 +2159,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("copilot"), TEXT("microsoft.com") },
     { TEXT("bing-ai"), TEXT("bing.com") },
 
-    // ê¸°íƒ€ AI ì„œë¹„ìŠ¤
+    // ±âÅ¸ AI ¼­ºñ½º
     { TEXT("midjourney"), TEXT("midjourney.com") },
     { TEXT("stability"), TEXT("stability.ai") },
     { TEXT("stablediffusion"), TEXT("stability.ai") },
@@ -2175,7 +2175,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("leonardo"), TEXT("leonardo.ai") },
     { TEXT("ideogram"), TEXT("ideogram.ai") },
 
-    // ==================== VPN & ë³´ì•ˆ ì„œë¹„ìŠ¤ ==================== //
+    // ==================== VPN & º¸¾È ¼­ºñ½º ==================== //
 
     { TEXT("nordvpn"), TEXT("nordvpn.com") },
     { TEXT("expressvpn"), TEXT("expressvpn.com") },
@@ -2193,9 +2193,9 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("purevpn"), TEXT("purevpn.com") },
     { TEXT("mullvad"), TEXT("mullvad.net") },
 
-    // ==================== ì¶”ê°€ ì•”í˜¸í™”í ì„œë¹„ìŠ¤ ==================== //
+    // ==================== Ãß°¡ ¾ÏÈ£È­Æó ¼­ºñ½º ==================== //
 
-    // DeFi í”Œë«í¼
+    // DeFi ÇÃ·§Æû
     { TEXT("uniswap"), TEXT("uniswap.org") },
     { TEXT("pancakeswap"), TEXT("pancakeswap.finance") },
     { TEXT("sushiswap"), TEXT("sushi.com") },
@@ -2207,7 +2207,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("balancer"), TEXT("balancer.fi") },
     { TEXT("1inch"), TEXT("1inch.io") },
 
-    // NFT ë§ˆì¼“í”Œë ˆì´ìŠ¤
+    // NFT ¸¶ÄÏÇÃ·¹ÀÌ½º
     { TEXT("opensea"), TEXT("opensea.io") },
     { TEXT("rarible"), TEXT("rarible.com") },
     { TEXT("blur"), TEXT("blur.io") },
@@ -2217,7 +2217,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("magiceden"), TEXT("magiceden.io") },
     { TEXT("looksrare"), TEXT("looksrare.org") },
 
-    // ì¶”ê°€ ì§€ê°‘
+    // Ãß°¡ Áö°©
     { TEXT("phantom"), TEXT("phantom.app") },
     { TEXT("rainbow"), TEXT("rainbow.me") },
     { TEXT("argent"), TEXT("argent.xyz") },
@@ -2225,103 +2225,103 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("walletconnect"), TEXT("walletconnect.com") },
     { TEXT("enjin"), TEXT("enjin.io") },
 
-    // í•œêµ­ ì•”í˜¸í™”í ì¶”ê°€
+    // ÇÑ±¹ ¾ÏÈ£È­Æó Ãß°¡
     { TEXT("dunamu"), TEXT("dunamu.com") },
     { TEXT("upbit-support"), TEXT("upbit.com") },
     { TEXT("bithumb-support"), TEXT("bithumb.com") },
 
-    // ==================== ì¶”ê°€ í•œêµ­ ì„œë¹„ìŠ¤ ==================== //
+    // ==================== Ãß°¡ ÇÑ±¹ ¼­ºñ½º ==================== //
 
-    // ë°°ë‹¬/ëª¨ë¹Œë¦¬í‹° í™•ì¥
-    { TEXT("ì¹´ì¹´ì˜¤T"), TEXT("kakaomobility.com") },
-    { TEXT("ë°°ë‹¬ì˜ë¯¼ì¡±"), TEXT("baemin.com") },
-    { TEXT("ìš”ê¸°ìš”"), TEXT("yogiyo.co.kr") },
-    { TEXT("ì¿ íŒ¡ì´ì¸ "), TEXT("coupangeats.com") },
-    { TEXT("í‹°ë§µ"), TEXT("tmap.co.kr") },
+    // ¹è´Ş/¸ğºô¸®Æ¼ È®Àå
+    { TEXT("Ä«Ä«¿ÀT"), TEXT("kakaomobility.com") },
+    { TEXT("¹è´ŞÀÇ¹ÎÁ·"), TEXT("baemin.com") },
+    { TEXT("¿ä±â¿ä"), TEXT("yogiyo.co.kr") },
+    { TEXT("ÄíÆÎÀÌÃ÷"), TEXT("coupangeats.com") },
+    { TEXT("Æ¼¸Ê"), TEXT("tmap.co.kr") },
     { TEXT("tmap"), TEXT("tmap.co.kr") },
-    { TEXT("ì¹´ì¹´ì˜¤ë§µ"), TEXT("kakao.com") },
-    { TEXT("ì¹´ì¹´ì˜¤íƒì‹œ"), TEXT("kakaomobility.com") },
+    { TEXT("Ä«Ä«¿À¸Ê"), TEXT("kakao.com") },
+    { TEXT("Ä«Ä«¿ÀÅÃ½Ã"), TEXT("kakaomobility.com") },
 
-    // í¬í„¸/ì½˜í…ì¸ 
-    { TEXT("ë„¤ì´ë²„"), TEXT("naver.com") },
-    { TEXT("ë‹¤ìŒ"), TEXT("daum.net") },
-    { TEXT("ë„¤ì´íŠ¸"), TEXT("nate.com") },
+    // Æ÷ÅĞ/ÄÜÅÙÃ÷
+    { TEXT("³×ÀÌ¹ö"), TEXT("naver.com") },
+    { TEXT("´ÙÀ½"), TEXT("daum.net") },
+    { TEXT("³×ÀÌÆ®"), TEXT("nate.com") },
     { TEXT("zum"), TEXT("zum.com") },
-    { TEXT("ì¹´ì¹´ì˜¤ìŠ¤í† ë¦¬"), TEXT("kakao.com") },
+    { TEXT("Ä«Ä«¿À½ºÅä¸®"), TEXT("kakao.com") },
     { TEXT("velog"), TEXT("velog.io") },
-    { TEXT("ë¸ŒëŸ°ì¹˜"), TEXT("brunch.co.kr") },
-    { TEXT("ë¸Œëœë””"), TEXT("brandi.co.kr") },
+    { TEXT("ºê·±Ä¡"), TEXT("brunch.co.kr") },
+    { TEXT("ºê·£µğ"), TEXT("brandi.co.kr") },
 
-    // ê¸ˆìœµ ì¶”ê°€
-    { TEXT("í† ìŠ¤ì¦ê¶Œ"), TEXT("toss.im") },
-    { TEXT("ë¯¸ë˜ì—ì…‹ì¦ê¶Œ"), TEXT("miraeasset.com") },
-    { TEXT("ì‚¼ì„±ì¦ê¶Œ"), TEXT("samsungpop.com") },
-    { TEXT("í•œêµ­íˆ¬ìì¦ê¶Œ"), TEXT("truefriend.com") },
-    { TEXT("kbì¦ê¶Œ"), TEXT("kbsec.com") },
-    { TEXT("nhíˆ¬ìì¦ê¶Œ"), TEXT("nhqv.com") },
-    { TEXT("í† ìŠ¤ë±…í¬"), TEXT("tossbank.com") },
-    { TEXT("ì¼€ì´ë±…í¬"), TEXT("kbank.com") },
-    { TEXT("ì¹´ì¹´ì˜¤ë±…í¬"), TEXT("kakaobank.com") },
+    // ±İÀ¶ Ãß°¡
+    { TEXT("Åä½ºÁõ±Ç"), TEXT("toss.im") },
+    { TEXT("¹Ì·¡¿¡¼ÂÁõ±Ç"), TEXT("miraeasset.com") },
+    { TEXT("»ï¼ºÁõ±Ç"), TEXT("samsungpop.com") },
+    { TEXT("ÇÑ±¹ÅõÀÚÁõ±Ç"), TEXT("truefriend.com") },
+    { TEXT("kbÁõ±Ç"), TEXT("kbsec.com") },
+    { TEXT("nhÅõÀÚÁõ±Ç"), TEXT("nhqv.com") },
+    { TEXT("Åä½º¹ğÅ©"), TEXT("tossbank.com") },
+    { TEXT("ÄÉÀÌ¹ğÅ©"), TEXT("kbank.com") },
+    { TEXT("Ä«Ä«¿À¹ğÅ©"), TEXT("kakaobank.com") },
 
-    // êµìœ¡/í•™ìŠµ
+    // ±³À°/ÇĞ½À
     { TEXT("classting"), TEXT("classting.com") },
-    { TEXT("í´ë˜ìŠ¤íŒ…"), TEXT("classting.com") },
+    { TEXT("Å¬·¡½ºÆÃ"), TEXT("classting.com") },
     { TEXT("mathpid"), TEXT("mathpid.com") },
     { TEXT("megastudy"), TEXT("megastudy.net") },
-    { TEXT("ëŒ€ì„±ë§ˆì´ë§¥"), TEXT("mimacstudy.com") },
-    { TEXT("ì´íˆ¬ìŠ¤"), TEXT("etoos.com") },
-    { TEXT("ì—ë“€ìœŒ"), TEXT("eduwill.net") },
-    { TEXT("í•´ì»¤ìŠ¤"), TEXT("hackers.com") },
+    { TEXT("´ë¼º¸¶ÀÌ¸Æ"), TEXT("mimacstudy.com") },
+    { TEXT("ÀÌÅõ½º"), TEXT("etoos.com") },
+    { TEXT("¿¡µàÀª"), TEXT("eduwill.net") },
+    { TEXT("ÇØÄ¿½º"), TEXT("hackers.com") },
 
-    // ì·¨ì—…/HR
-    { TEXT("ì‚¬ëŒì¸"), TEXT("saramin.co.kr") },
-    { TEXT("ì¡ì½”ë¦¬ì•„"), TEXT("jobkorea.co.kr") },
-    { TEXT("ì›í‹°ë“œ"), TEXT("wanted.co.kr") },
-    { TEXT("ë§í¬ë“œì¸"), TEXT("linkedin.com") },
-    { TEXT("ì¸í¬ë£¨íŠ¸"), TEXT("incruit.com") },
-    { TEXT("ì¡í”Œë˜ë‹›"), TEXT("jobplanet.co.kr") },
-    { TEXT("ë¦¬ë©¤ë²„"), TEXT("remember.co.kr") },
+    // Ãë¾÷/HR
+    { TEXT("»ç¶÷ÀÎ"), TEXT("saramin.co.kr") },
+    { TEXT("ÀâÄÚ¸®¾Æ"), TEXT("jobkorea.co.kr") },
+    { TEXT("¿øÆ¼µå"), TEXT("wanted.co.kr") },
+    { TEXT("¸µÅ©µåÀÎ"), TEXT("linkedin.com") },
+    { TEXT("ÀÎÅ©·çÆ®"), TEXT("incruit.com") },
+    { TEXT("ÀâÇÃ·¡´Ö"), TEXT("jobplanet.co.kr") },
+    { TEXT("¸®¸â¹ö"), TEXT("remember.co.kr") },
 
-    // ë¶€ë™ì‚° ì¶”ê°€
-    { TEXT("ì§ë°©"), TEXT("zigbang.com") },
-    { TEXT("ë‹¤ë°©"), TEXT("dabang.com") },
-    { TEXT("í˜¸ê°±ë…¸ë…¸"), TEXT("hogangnono.com") },
-    { TEXT("ë„¤ì´ë²„ë¶€ë™ì‚°"), TEXT("naver.com") },
-    { TEXT("ë¶€ë™ì‚°114"), TEXT("r114.com") },
+    // ºÎµ¿»ê Ãß°¡
+    { TEXT("Á÷¹æ"), TEXT("zigbang.com") },
+    { TEXT("´Ù¹æ"), TEXT("dabang.com") },
+    { TEXT("È£°»³ë³ë"), TEXT("hogangnono.com") },
+    { TEXT("³×ÀÌ¹öºÎµ¿»ê"), TEXT("naver.com") },
+    { TEXT("ºÎµ¿»ê114"), TEXT("r114.com") },
 
-    // ì»¤ë¨¸ìŠ¤/ë°°ì†¡ ì¶”ê°€
-    { TEXT("ë¬´ì‹ ì‚¬"), TEXT("musinsa.com") },
-    { TEXT("ì§€ê·¸ì¬ê·¸"), TEXT("zigzag.kr") },
-    { TEXT("ì—ì´ë¸”ë¦¬"), TEXT("a-bly.com") },
+    // Ä¿¸Ó½º/¹è¼Û Ãß°¡
+    { TEXT("¹«½Å»ç"), TEXT("musinsa.com") },
+    { TEXT("Áö±×Àç±×"), TEXT("zigzag.kr") },
+    { TEXT("¿¡ÀÌºí¸®"), TEXT("a-bly.com") },
     { TEXT("29cm"), TEXT("29cm.co.kr") },
-    { TEXT("wì»¨ì…‰"), TEXT("wconcept.co.kr") },
-    { TEXT("ë°œë€"), TEXT("balaan.co.kr") },
-    { TEXT("ì»¬ë¦¬"), TEXT("kurly.com") },
-    { TEXT("ì¿ íŒ¡"), TEXT("coupang.com") },
-    { TEXT("ë„¤ì´ë²„ì‡¼í•‘"), TEXT("naver.com") },
-    { TEXT("11ë²ˆê°€"), TEXT("11st.co.kr") },
-    { TEXT("ì§€ë§ˆì¼“"), TEXT("gmarket.co.kr") },
-    { TEXT("ì˜¥ì…˜"), TEXT("auction.co.kr") },
+    { TEXT("wÄÁ¼Á"), TEXT("wconcept.co.kr") },
+    { TEXT("¹ß¶õ"), TEXT("balaan.co.kr") },
+    { TEXT("ÄÃ¸®"), TEXT("kurly.com") },
+    { TEXT("ÄíÆÎ"), TEXT("coupang.com") },
+    { TEXT("³×ÀÌ¹ö¼îÇÎ"), TEXT("naver.com") },
+    { TEXT("11¹ø°¡"), TEXT("11st.co.kr") },
+    { TEXT("Áö¸¶ÄÏ"), TEXT("gmarket.co.kr") },
+    { TEXT("¿Á¼Ç"), TEXT("auction.co.kr") },
 
-    // ì—”í„°í…Œì¸ë¨¼íŠ¸
-    { TEXT("ë©œë¡ "), TEXT("melon.com") },
-    { TEXT("ì§€ë‹ˆ"), TEXT("genie.co.kr") },
-    { TEXT("ë²…ìŠ¤"), TEXT("bugs.co.kr") },
-    { TEXT("í”Œë¡œ"), TEXT("music-flo.com") },
-    { TEXT("ë°”ì´ë¸Œ"), TEXT("vibe.naver.com") },
-    { TEXT("ì›¨ì´ë¸Œ"), TEXT("wavve.com") },
-    { TEXT("í‹°ë¹™"), TEXT("tving.com") },
-    { TEXT("ì™“ì± "), TEXT("watcha.com") },
+    // ¿£ÅÍÅ×ÀÎ¸ÕÆ®
+    { TEXT("¸á·Ğ"), TEXT("melon.com") },
+    { TEXT("Áö´Ï"), TEXT("genie.co.kr") },
+    { TEXT("¹÷½º"), TEXT("bugs.co.kr") },
+    { TEXT("ÇÃ·Î"), TEXT("music-flo.com") },
+    { TEXT("¹ÙÀÌºê"), TEXT("vibe.naver.com") },
+    { TEXT("¿şÀÌºê"), TEXT("wavve.com") },
+    { TEXT("Æ¼ºù"), TEXT("tving.com") },
+    { TEXT("¿ÓÃ­"), TEXT("watcha.com") },
 
-    // ê¸°íƒ€ ì„œë¹„ìŠ¤
-    { TEXT("ë‹¹ê·¼ë§ˆì¼“"), TEXT("daangn.com") },
-    { TEXT("ì¤‘ê³ ë‚˜ë¼"), TEXT("joonggonara.co.kr") },
-    { TEXT("ë²ˆê°œì¥í„°"), TEXT("bunjang.co.kr") },
-    { TEXT("í—¬ë¡œë§ˆì¼“"), TEXT("hellomarket.com") },
+    // ±âÅ¸ ¼­ºñ½º
+    { TEXT("´ç±Ù¸¶ÄÏ"), TEXT("daangn.com") },
+    { TEXT("Áß°í³ª¶ó"), TEXT("joonggonara.co.kr") },
+    { TEXT("¹ø°³ÀåÅÍ"), TEXT("bunjang.co.kr") },
+    { TEXT("Çï·Î¸¶ÄÏ"), TEXT("hellomarket.com") },
 
-    // ==================== ì¶”ê°€ ê¸€ë¡œë²Œ ì„œë¹„ìŠ¤ ==================== //
+    // ==================== Ãß°¡ ±Û·Î¹ú ¼­ºñ½º ==================== //
 
-    // ì†Œì…œ/ì»¤ë®¤ë‹ˆí‹°
+    // ¼Ò¼È/Ä¿¹Â´ÏÆ¼
     { TEXT("bluesky"), TEXT("bsky.app") },
     { TEXT("mastodon"), TEXT("mastodon.social") },
     { TEXT("substack"), TEXT("substack.com") },
@@ -2334,7 +2334,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("vimeo"), TEXT("vimeo.com") },
     { TEXT("dailymotion"), TEXT("dailymotion.com") },
 
-    // í´ë¼ìš°ë“œ/ê°œë°œ
+    // Å¬¶ó¿ìµå/°³¹ß
     { TEXT("replit"), TEXT("replit.com") },
     { TEXT("codepen"), TEXT("codepen.io") },
     { TEXT("codesandbox"), TEXT("codesandbox.io") },
@@ -2354,7 +2354,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("pagerduty"), TEXT("pagerduty.com") },
     { TEXT("statuspage"), TEXT("statuspage.io") },
 
-    // ë””ìì¸/í¬ë¦¬ì—ì´í‹°ë¸Œ ì¶”ê°€
+    // µğÀÚÀÎ/Å©¸®¿¡ÀÌÆ¼ºê Ãß°¡
     { TEXT("framer"), TEXT("framer.com") },
     { TEXT("webflow"), TEXT("webflow.com") },
     { TEXT("airtable"), TEXT("airtable.com") },
@@ -2364,7 +2364,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("affinity"), TEXT("affinity.serif.com") },
     { TEXT("procreate"), TEXT("procreate.com") },
 
-    // ê²°ì œ/ì†¡ê¸ˆ ì¶”ê°€
+    // °áÁ¦/¼Û±İ Ãß°¡
     { TEXT("payoneer"), TEXT("payoneer.com") },
     { TEXT("skrill"), TEXT("skrill.com") },
     { TEXT("neteller"), TEXT("neteller.com") },
@@ -2375,7 +2375,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("applepay"), TEXT("apple.com") },
     { TEXT("samsungpay"), TEXT("samsung.com") },
 
-    // ì‡¼í•‘ ì¶”ê°€
+    // ¼îÇÎ Ãß°¡
     { TEXT("temu"), TEXT("temu.com") },
     { TEXT("shein"), TEXT("shein.com") },
     { TEXT("romwe"), TEXT("romwe.com") },
@@ -2384,7 +2384,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("banggood"), TEXT("banggood.com") },
     { TEXT("lightinthebox"), TEXT("lightinthebox.com") },
 
-    // ì—¬í–‰/ìˆ™ë°• ì¶”ê°€
+    // ¿©Çà/¼÷¹Ú Ãß°¡
     { TEXT("vrbo"), TEXT("vrbo.com") },
     { TEXT("hostelworld"), TEXT("hostelworld.com") },
     { TEXT("hotwire"), TEXT("hotwire.com") },
@@ -2396,7 +2396,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("avis"), TEXT("avis.com") },
     { TEXT("budget"), TEXT("budget.com") },
 
-    // ê±´ê°•/í”¼íŠ¸ë‹ˆìŠ¤
+    // °Ç°­/ÇÇÆ®´Ï½º
     { TEXT("strava"), TEXT("strava.com") },
     { TEXT("myfitnesspal"), TEXT("myfitnesspal.com") },
     { TEXT("fitbit"), TEXT("fitbit.com") },
@@ -2406,7 +2406,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("headspace"), TEXT("headspace.com") },
     { TEXT("calm"), TEXT("calm.com") },
 
-    // êµìœ¡
+    // ±³À°
     { TEXT("brilliant"), TEXT("brilliant.org") },
     { TEXT("datacamp"), TEXT("datacamp.com") },
     { TEXT("leetcode"), TEXT("leetcode.com") },
@@ -2416,7 +2416,7 @@ const std::unordered_map<std::tstring, std::tstring> g_BrandList =
     { TEXT("sololearn"), TEXT("sololearn.com") },
     { TEXT("treehouse"), TEXT("teamtreehouse.com") },
 
-    // IT ì§€ì› ì‚¬ì¹­
+    // IT Áö¿ø »çÄª
     { TEXT("amazon-support"), TEXT("amazon.com") },
     { TEXT("ebay-support"), TEXT("ebay.com") },
     { TEXT("paypal-support"), TEXT("paypal.com") },

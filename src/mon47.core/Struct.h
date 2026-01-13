@@ -6,8 +6,8 @@
 //
 //struct QueryParamValue
 //{
-//	std::string key;		// ê²€ìƒ‰ìš©
-//	std::string value;		// ì›ë³¸
+//	std::string key;		// °Ë»ö¿ë
+//	std::string value;		// ¿øº»
 //};
 //using QueryParamMap = std::unordered_multimap<std::string, QueryParamValue>;
 
@@ -16,7 +16,7 @@ struct ST_URL_DATA
 	std::tstring strScheme;
 	std::tstring strFqdn;
 	std::tstring strPort;
-	std::tstring strPath;	// /ë¥¼ ì œì™¸í•œ ê²½ë¡œ ì •ë³´
+	std::tstring strPath;	// /¸¦ Á¦¿ÜÇÑ °æ·Î Á¤º¸
 	std::tstring strQuery;
 	std::map<std::tstring, std::tstring> mapQueryParam;
 	std::tstring strHost;
@@ -242,11 +242,11 @@ struct CymruData
 struct GetterData
 {
 	int http_response_code;
-	std::string final_url; // ìµœì¢… ë¦¬ë‹¤ì´ë ‰íŠ¸ url
-	std::string original_url; // ìµœì´ˆ ìš”ì²­í•œ url
-	std::string strNormalizedURL; // ì •ê·œí™”ëœ url
-	std::string display_url; // ë³´ì—¬ì§€ëŠ” url
-	std::string strFqdn; // ì •ê·œí™”ëœ í˜¸ìŠ¤íŠ¸ ì´ë¦„
+	std::string final_url; // ÃÖÁ¾ ¸®´ÙÀÌ·ºÆ® url
+	std::string original_url; // ÃÖÃÊ ¿äÃ»ÇÑ url
+	std::string strNormalizedURL; // Á¤±ÔÈ­µÈ url
+	std::string display_url; // º¸¿©Áö´Â url
+	std::string strFqdn; // Á¤±ÔÈ­µÈ È£½ºÆ® ÀÌ¸§
 	std::string final_fqdn;
 	std::vector<std::string> ip_addresses;
 

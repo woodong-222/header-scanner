@@ -9,6 +9,7 @@
 #include "../../../cppcore/Inc/cppcore.h"
 #include "../../../sutra/Src/_SutraFramework/_SutraFramework.h"
 #include "../../../sutra/Src/_SutraMain/_SutraMain.h"
+#include "../mon47.core/mon47.core.h"
 
 #pragma comment(lib, "cppcore.lib")
 #pragma comment(lib, "_SutraFramework.lib")

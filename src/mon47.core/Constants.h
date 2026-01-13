@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 extern std::map<std::tstring, WORD> g_DefaultPort;
 extern const std::unordered_map<std::tstring, std::tstring> g_CdnList;

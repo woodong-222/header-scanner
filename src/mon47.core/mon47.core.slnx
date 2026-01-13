@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="HeaderScanner.vcxproj" />
+  <Project Path="mon47.core.vcxproj" Id="f43629ad-9120-4bd6-b1c3-86f8419a1c3a" />
 </Solution>

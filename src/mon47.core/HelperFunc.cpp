@@ -1,58 +1,58 @@
-ï»¿#include "pch.h"
+#include "pch.h"
 #include "HelperFunc.h"
 #include "Constants.h"
 
 std::tstring JoinStrings(const std::vector<std::tstring>& vecValues, std::tstring strDelimiter, size_t tStartPos)
 {
-    std::tstring strRet;
-    for (size_t i=tStartPos; i<vecValues.size(); i++)
-        strRet += vecValues[i] + strDelimiter;
-    strRet = TrimRight(strRet, strDelimiter.c_str());
-    return std::move(strRet);
+	std::tstring strRet;
+	for (size_t i = tStartPos; i < vecValues.size(); i++)
+		strRet += vecValues[i] + strDelimiter;
+	strRet = TrimRight(strRet, strDelimiter.c_str());
+	return std::move(strRet);
 }
 
-// Base64 ë¬¸ìì—´ì¸ì§€ í™•ì¸
-// ë¹ˆ ê²½ìš°, 4ë¡œ ë‚˜ëˆ„ì–´ë–¨ì–´ì§€ì§€ ì•ŠëŠ” ê²½ìš°, ì˜ëª»ëœ ë¬¸ì í¬í•¨, íŒ¨ë”©ì´ ì˜ëª»ëœ ê²½ìš° false ë°˜í™˜
+// Base64 ¹®ÀÚ¿­ÀÎÁö È®ÀÎ
+// ºó °æ¿ì, 4·Î ³ª´©¾î¶³¾îÁöÁö ¾Ê´Â °æ¿ì, Àß¸øµÈ ¹®ÀÚ Æ÷ÇÔ, ÆĞµùÀÌ Àß¸øµÈ °æ¿ì false ¹İÈ¯
 bool IsBase64(const std::tstring& str)
 {
-    if (str.empty())
+	if (str.empty())
 		return false;
 
 	if (str.length() % 4 != 0)
 		return false;
 
-    UINT64 padding_pos = std::tstring::npos;
-    for (UINT64 i = 0; i < str.length(); ++i)
-    {
-        TCHAR c = str[i];
-        if (isalnum(c) || c == '+' || c == '/' || c == '-' || c == '_')
-        {
-            if (padding_pos != std::tstring::npos) { return false; }
-            continue;
-        }
+	UINT64 padding_pos = std::tstring::npos;
+	for (UINT64 i = 0; i < str.length(); ++i)
+	{
+		TCHAR c = str[i];
+		if (isalnum(c) || c == '+' || c == '/' || c == '-' || c == '_')
+		{
+			if (padding_pos != std::tstring::npos) { return false; }
+			continue;
+		}
 
-        if (c == '=')
-        {
-            if (padding_pos == std::tstring::npos)
-            {
-                padding_pos = i;
-            }
-            continue;
-        }
+		if (c == '=')
+		{
+			if (padding_pos == std::tstring::npos)
+			{
+				padding_pos = i;
+			}
+			continue;
+		}
 
-        return false;
-    }
+		return false;
+	}
 
-    if (padding_pos != std::tstring::npos)
-    {
-        if (str.length() - padding_pos > 2)
+	if (padding_pos != std::tstring::npos)
+	{
+		if (str.length() - padding_pos > 2)
 			return false;
-    }
+	}
 
-    return true;
+	return true;
 }
 
-// ex) mailto:aaa@bbb.com?subject=ì œëª©&body=ë³¸ë¬¸ì…ë‹ˆë‹¤.&cc=cc@example.com&bcc=bcc@example.com
+// ex) mailto:aaa@bbb.com?subject=Á¦¸ñ&body=º»¹®ÀÔ´Ï´Ù.&cc=cc@example.com&bcc=bcc@example.com
 ECODE ParseMailTo(std::tstring strUrl, UrlData& outInfo)
 {
 	std::tstring strUserInfo;
@@ -108,20 +108,20 @@ ECODE ParseURL(std::tstring strURL, UrlData& outInfo)
 
 	try
 	{
-		// ì´ìŠ¤ì¼€ì´í”„ (%ìˆ«ì, 0ìˆ«ì) ì œê±°
-		// ê´€ë ¨ìƒ˜í”Œ: C905E41A8BCC21535DED384AFD6AF34C7DD48DB45D6584749F7A12F77D40A3DA
+		// ÀÌ½ºÄÉÀÌÇÁ (%¼ıÀÚ, 0¼ıÀÚ) Á¦°Å
+		// °ü·Ã»ùÇÃ: C905E41A8BCC21535DED384AFD6AF34C7DD48DB45D6584749F7A12F77D40A3DA
 		//           c2ed9eb91d84f5b6114d34be06b6cabd.pdf
 		strURL = DecodeUrlEncoding(strURL);
 
-		// í¬ë¡¬ì´ë‚˜ ì—£ì§€ ê°™ì€ ì¼ë¶€ ë¸Œë¼ìš°ì €ëŠ” ìë™ ì¹˜í™˜ë¨
-		// ê´€ë ¨ìƒ˜í”Œ: FA7E1EDD021F78564B3E6FFD5F13D7AF1FE69A1891CC492BA84CCBD77E7F9E31
+		// Å©·ÒÀÌ³ª ¿§Áö °°Àº ÀÏºÎ ºê¶ó¿ìÀú´Â ÀÚµ¿ Ä¡È¯µÊ
+		// °ü·Ã»ùÇÃ: FA7E1EDD021F78564B3E6FFD5F13D7AF1FE69A1891CC492BA84CCBD77E7F9E31
 		strURL = Replace(strURL, TEXT("\\"), TEXT("/"));
 		strURL = Replace(strURL, TEXT(";//"), TEXT("://"));
 
 		const size_t tSchemeDelimiterPos = strURL.find(TEXT("://"));
 		if (-1 != tSchemeDelimiterPos)
 		{
-			// scheme ì•ë¶€ë¶„ë§Œ ì†Œë¬¸ìë¡œ ì¹˜í™˜
+			// scheme ¾ÕºÎºĞ¸¸ ¼Ò¹®ÀÚ·Î Ä¡È¯
 			for (size_t i = 0; i < tSchemeDelimiterPos; i++)
 			{
 				TCHAR& tChar = strURL[i];
@@ -133,7 +133,7 @@ ECODE ParseURL(std::tstring strURL, UrlData& outInfo)
 			while (strURL.find(TEXT("http:///")) != -1)
 				strURL = Replace(strURL, TEXT("http:///"), TEXT("http://"));
 		}
-		
+
 
 		nRet = EC_NO_DATA;
 		strURL = Trim(strURL);
@@ -195,7 +195,7 @@ ECODE ParseURL(std::tstring strURL, UrlData& outInfo)
 			if (2 <= tHostTokenCount)
 				outInfo.strTLD2 = vecHostToken[tHostTokenCount - 2] + TEXT(".") + outInfo.strTLD;
 		}
-		
+
 		if (std::tstring::npos != tPos && strURL[tPos] == TEXT('/'))
 		{
 			const size_t tPathSep = strURL.find_first_of(TEXT("?#"), ++tPos);
@@ -242,7 +242,7 @@ ECODE ParseURL(std::tstring strURL, UrlData& outInfo)
 	return EC_SUCCESS;
 }
 
-//16ì§„ìˆ˜ ë¬¸ì ë°€ë„ ê³„ì‚°	
+//16Áø¼ö ¹®ÀÚ ¹Ğµµ °è»ê	
 double CalculateHexDensity(const std::tstring& label)
 {
 	if (label.empty()) { return 0.0; }

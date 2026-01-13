@@ -1,5 +1,4 @@
-﻿#pragma once
+#pragma once
 
-#include "HelperFunc.h"
-#include "SurfaceScanner.h"
-#include "SurfaceScannerHelper.h"
+#include "HeaderScanner.h"
+#include "HeaderScannerHelper.h"
