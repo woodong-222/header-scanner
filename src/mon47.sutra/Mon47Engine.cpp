@@ -30,7 +30,7 @@ ECODE CMon47Engine::OnURLScan(SUTRA_ANALYZE_URL stUrlInfo)
 	{
 		for (const SUTRA_URL_INFO& stURLInfo: stUrlInfo.Urls)
 		{
-			CHeaderScanner scanner;
+			CScanner scanner;
 			scanner.Scan(stURLInfo.strURL);
 		}
 	}

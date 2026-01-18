@@ -2,11 +2,11 @@
 
 #include "../../../sutra/Src/_SutraFramework/Struct.h"
 
-class CHeaderScanner
+class CScanner
 {
 public:
-	CHeaderScanner(void);
-	~CHeaderScanner(void);
+	CScanner(void);
+	~CScanner(void);
 
 	ECODE Scan(std::tstring strURL);
 };

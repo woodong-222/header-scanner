@@ -8,6 +8,6 @@
 
 using namespace core;
 
-#pragma comment(lib, "gtest.lib")
+//#pragma comment(lib, "gtest.lib")
 #pragma comment(lib, "gtest_main.lib")
 #pragma comment(lib, "cppcore.lib")

@@ -2,15 +2,15 @@
 #include "HeaderScanner.h"
 #include "HeaderScannerHelper.h"
 
-CHeaderScanner::CHeaderScanner(void)
+CScanner::CScanner(void)
 {
 }
 
-CHeaderScanner::~CHeaderScanner(void)
+CScanner::~CScanner(void)
 {
 }
 
-ECODE CHeaderScanner::Scan(std::tstring strURL)
+ECODE CScanner::Scan(std::tstring strURL)
 {
 	ECODE nRet = EC_SUCCESS;
 

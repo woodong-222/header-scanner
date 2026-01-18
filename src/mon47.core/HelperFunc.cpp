@@ -11,8 +11,8 @@ std::tstring JoinStrings(const std::vector<std::tstring>& vecValues, std::tstrin
 	return std::move(strRet);
 }
 
-// Base64 ¹®ÀÚ¿­ÀÎÁö È®ÀÎ
-// ºó °æ¿ì, 4·Î ³ª´©¾î¶³¾îÁöÁö ¾Ê´Â °æ¿ì, Àß¸øµÈ ¹®ÀÚ Æ÷ÇÔ, ÆÐµùÀÌ Àß¸øµÈ °æ¿ì false ¹ÝÈ¯
+// Base64 ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
+// ï¿½ï¿½ ï¿½ï¿½ï¿½, 4ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½î¶³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ ï¿½ï¿½ï¿½, ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½Ðµï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ false ï¿½ï¿½È¯
 bool IsBase64(const std::tstring& str)
 {
 	if (str.empty())
@@ -52,7 +52,7 @@ bool IsBase64(const std::tstring& str)
 	return true;
 }
 
-// ex) mailto:aaa@bbb.com?subject=Á¦¸ñ&body=º»¹®ÀÔ´Ï´Ù.&cc=cc@example.com&bcc=bcc@example.com
+// ex) mailto:aaa@bbb.com?subject=ï¿½ï¿½ï¿½ï¿½&body=ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.&cc=cc@example.com&bcc=bcc@example.com
 ECODE ParseMailTo(std::tstring strUrl, UrlData& outInfo)
 {
 	std::tstring strUserInfo;
@@ -108,20 +108,20 @@ ECODE ParseURL(std::tstring strURL, UrlData& outInfo)
 
 	try
 	{
-		// ÀÌ½ºÄÉÀÌÇÁ (%¼ýÀÚ, 0¼ýÀÚ) Á¦°Å
-		// °ü·Ã»ùÇÃ: C905E41A8BCC21535DED384AFD6AF34C7DD48DB45D6584749F7A12F77D40A3DA
+		// ï¿½Ì½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (%ï¿½ï¿½ï¿½ï¿½, 0ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½
+		// ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½: C905E41A8BCC21535DED384AFD6AF34C7DD48DB45D6584749F7A12F77D40A3DA
 		//           c2ed9eb91d84f5b6114d34be06b6cabd.pdf
 		strURL = DecodeUrlEncoding(strURL);
 
-		// Å©·ÒÀÌ³ª ¿§Áö °°Àº ÀÏºÎ ºê¶ó¿ìÀú´Â ÀÚµ¿ Ä¡È¯µÊ
-		// °ü·Ã»ùÇÃ: FA7E1EDD021F78564B3E6FFD5F13D7AF1FE69A1891CC492BA84CCBD77E7F9E31
+		// Å©ï¿½ï¿½ï¿½Ì³ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ Ä¡È¯ï¿½ï¿½
+		// ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½: FA7E1EDD021F78564B3E6FFD5F13D7AF1FE69A1891CC492BA84CCBD77E7F9E31
 		strURL = Replace(strURL, TEXT("\\"), TEXT("/"));
 		strURL = Replace(strURL, TEXT(";//"), TEXT("://"));
 
 		const size_t tSchemeDelimiterPos = strURL.find(TEXT("://"));
 		if (-1 != tSchemeDelimiterPos)
 		{
-			// scheme ¾ÕºÎºÐ¸¸ ¼Ò¹®ÀÚ·Î Ä¡È¯
+			// scheme ï¿½ÕºÎºÐ¸ï¿½ ï¿½Ò¹ï¿½ï¿½Ú·ï¿½ Ä¡È¯
 			for (size_t i = 0; i < tSchemeDelimiterPos; i++)
 			{
 				TCHAR& tChar = strURL[i];
@@ -242,7 +242,7 @@ ECODE ParseURL(std::tstring strURL, UrlData& outInfo)
 	return EC_SUCCESS;
 }
 
-//16Áø¼ö ¹®ÀÚ ¹Ðµµ °è»ê	
+//16ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ðµï¿½ ï¿½ï¿½ï¿½
 double CalculateHexDensity(const std::tstring& label)
 {
 	if (label.empty()) { return 0.0; }

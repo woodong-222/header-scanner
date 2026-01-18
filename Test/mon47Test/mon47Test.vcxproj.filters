@@ -6,4 +6,7 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="vcpkg.json" />
+  </ItemGroup>
 </Project>
