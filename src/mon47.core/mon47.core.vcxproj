@@ -329,6 +329,7 @@
     <ClInclude Include="HelperFunc.h" />
     <ClInclude Include="mon47.core.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Scanner.h" />
     <ClInclude Include="Struct.h" />
   </ItemGroup>
   <ItemGroup>
@@ -337,6 +338,7 @@
     <ClCompile Include="HeaderScannerHelper.cpp" />
     <ClCompile Include="HelperFunc.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Scanner.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

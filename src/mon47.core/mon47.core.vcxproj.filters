@@ -9,6 +9,7 @@
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Struct.h" />
     <ClInclude Include="Define.h" />
+    <ClInclude Include="Scanner.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -16,5 +17,6 @@
     <ClCompile Include="HeaderScannerHelper.cpp" />
     <ClCompile Include="HelperFunc.cpp" />
     <ClCompile Include="Constants.cpp" />
+    <ClCompile Include="Scanner.cpp" />
   </ItemGroup>
 </Project>
